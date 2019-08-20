@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="YOLO: You Only Look OnceYOLO是一种Real time的Object Detection的算法，他颠覆了当时两种主要的state-of-the-art的方法：sliding window &amp;amp; region-proposal，YOLO使用回归的方法，将Image输入到一个CNN中直接输出检测到的Object的坐标和类别。因此testing time的时候只需要一次前">
+<meta name="keywords" content="Object Detection,Paper Reading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="YOLO (You Only Look Once)">
+<meta property="og:url" content="http://github.com/YOLO.html">
+<meta property="og:site_name" content="Kai Chen&#39;s Homepage">
+<meta property="og:description" content="YOLO: You Only Look OnceYOLO是一种Real time的Object Detection的算法，他颠覆了当时两种主要的state-of-the-art的方法：sliding window &amp;amp; region-proposal，YOLO使用回归的方法，将Image输入到一个CNN中直接输出检测到的Object的坐标和类别。因此testing time的时候只需要一次前">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://github.com/images/YOLO/1.png">
+<meta property="og:image" content="http://github.com/images/YOLO/2.png">
+<meta property="og:image" content="http://github.com/images/YOLO/4.png">
+<meta property="og:image" content="http://github.com/images/YOLO/3.png">
+<meta property="og:image" content="http://github.com/images/YOLO/5.png">
+<meta property="og:image" content="http://github.com/images/YOLO/6.PNG">
+<meta property="og:image" content="http://github.com/images/YOLO/7.png">
+<meta property="og:image" content="http://github.com/images/YOLO/8.png">
+<meta property="og:image" content="http://github.com/images/YOLO/9.png">
+<meta property="og:image" content="http://github.com/images/YOLO/10.png">
+<meta property="og:updated_time" content="2019-01-04T23:33:06.334Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YOLO (You Only Look Once)">
+<meta name="twitter:description" content="YOLO: You Only Look OnceYOLO是一种Real time的Object Detection的算法，他颠覆了当时两种主要的state-of-the-art的方法：sliding window &amp;amp; region-proposal，YOLO使用回归的方法，将Image输入到一个CNN中直接输出检测到的Object的坐标和类别。因此testing time的时候只需要一次前">
+<meta name="twitter:image" content="http://github.com/images/YOLO/1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kai Chen's Homepage" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://github.com/YOLO.html">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>YOLO (You Only Look Once) | Kai Chen's Homepage</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+<a href="https://KaiChen1998.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kai Chen's Homepage</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about_me">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/About_me/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About_me</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://github.com/YOLO.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kai Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kai Chen's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">YOLO (You Only Look Once)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-20 10:27:51" itemprop="dateCreated datePublished" datetime="2018-12-20T10:27:51+08:00">2018-12-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-05 07:33:06" itemprop="dateModified" datetime="2019-01-05T07:33:06+08:00">2019-01-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Computer-Science/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="YOLO-You-Only-Look-Once"><a href="#YOLO-You-Only-Look-Once" class="headerlink" title="YOLO: You Only Look Once"></a>YOLO: You Only Look Once</h1><p>YOLO是一种Real time的Object Detection的算法，他颠覆了当时两种主要的state-of-the-art的方法：sliding window &amp; region-proposal，YOLO使用回归的方法，将Image输入到一个CNN中直接输出检测到的Object的坐标和类别。因此testing time的时候只需要一次前馈即可，算法在保证较高精度的前提下实现了很高的计算速度（&gt;45 FPS，正常视频的帧数为20-30FPS）。Fast的计算速度带来的是Predict Location的较大误差和受困于小object，这是YOLO的主要难题。（对了，这里主要讨论YOLO v1）</p>
+<h2 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea"></a>Main Idea</h2><p>我们将图片分为S <em> S个grid（v1中使用7</em>7），每一个grid我们有B个Bounding Box（v1中B=2），每一个bounding box有5个参数：bounding box中心点坐标x，y和box的长宽w、h。需要注意的是这里的x、y、w、h都被归一化处理了，x&amp;y除以了grid location，w&amp;h除以了Image Size。</p>
+<p>第5个参数对于这个bounding box中是否存在Object（先不管其class）的confidence：其中Pr(Object)=1 or 0，代表box中是否含有Object，IOU为其与ground truth的重合程度（我认为这里应该是和训练时的Object的重合程度吧= =）。<strong>这里计算的就是loss function里的ground truth Ci~</strong></p>
+<p><img src="/images/YOLO/1.png" alt="img"></p>
+<p>另外每一个grid会有C个class的条件概率预测，注意这里的条件概率每一个grid的B个bounding box共享。这里的条件概率和上述的confidence相乘，就能得到每一个box的各分类预测概率作为预测的主要依据。</p>
+<p><img src="/images/YOLO/2.png" alt="img"></p>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p><img src="/images/YOLO/4.png" alt="img"></p>
+<p>Test time的过程比较简单，图像输入CNN后会得到S <em> S </em> B个bounding box和其对应的class confidence，但是这里面大部分都不包含我们想要的Object，所以我们首先会有一个threshold(= 0.3 here)，confidence低于阈值的舍去，然后再做一个Non-maximal suppression（非极大值抑制）。</p>
+<h3 id="Non-maximal-suppression（非极大值抑制）"><a href="#Non-maximal-suppression（非极大值抑制）" class="headerlink" title="Non-maximal suppression（非极大值抑制）"></a>Non-maximal suppression（非极大值抑制）</h3><p>非极大值抑制实际上几乎是所有Object detection算法在test time最后都会做的一件事，主要是为了避免对于同一个Object生成多个重合度很高的bounding box。过程也比较简单，对于每一个不同的class object（可能在一起也可能不在一起，never mind，只是一个稍微简化一点的过程）选出当前confidence最高的box，比较所有box和它的重合程度（IOU，就是计算两个box的重叠面积 / 选出的box的面积），IOU大于给定阈值即被舍去。迭代直到所有的box都被选出来为止。</p>
+<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><p>每一篇Object detection论文的训练过程对于我这种不了解PASCAL VOC和COCO数据集内部结构的人简直是噩梦一样，但是总归看出了些东西，总结一下。</p>
+<h3 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h3><p><img src="/images/YOLO/3.png" alt="img"></p>
+<p>24层卷积层 + 2层FC层（之后YOLO v2取消了FC使用全卷积）。和大部分操作相同，先使用前20层在ImageNet上预训练，之后再加入后面的卷积层和全连接层。</p>
+<h3 id="Loss-Function"><a href="#Loss-Function" class="headerlink" title="Loss Function"></a>Loss Function</h3><p>训练过程中，每一个正bounding box和ground truth是一一对应的。我们将标记好的ground truth box根据其中心点位置分配给某一个grid，再根据其B个box中哪一个和ground truth的IOU最高将这个ground truth分配个这个grid的这个box，剩下的没有分配ground truth的box都称为no object box。每一个box分配一个ground truth，i.e. 极限情况下如果一个box和两个ground truth都是理论上的最适组合也只能选一个，另一个给另一个bounding box。下图选自<a href="https://blog.csdn.net/c20081052/article/details/80236015" target="_blank" rel="noopener">某位同学的CSDN博客</a></p>
+<p><img src="/images/YOLO/5.png" alt="img"></p>
+<h3 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h3><p>训练的时候：输入N个图像，每个图像包含M个object，每个object包含4个坐标（x，y，w，h）和1个label。然后通过网络得到7 <em> 7 </em> 30大小的三维矩阵。每个1 * 30的向量前5个元素表示第一个bounding box的4个坐标和1个confidence，第6到10元素表示第二个bounding box的4个坐标和1个confidence。最后20个表示这个grid cell所属类别。注意这30个都是预测的结果。然后就可以计算损失函数的第一、二 、五行。至于第三四行，ground truth confidence可以根据ground truth和预测的bounding box计算出的IOU和是否有object的0,1值相乘得到。这样就能计算出loss function的值了。</p>
+<p>同时location坐标x，y，w，h都被归一化，因此也可以认为是预测相对于grid坐标的修正，<strong>注意这里的定义和R-CNN的不同</strong>。</p>
+<h2 id="tensorflow源码分析"><a href="#tensorflow源码分析" class="headerlink" title="tensorflow源码分析"></a>tensorflow源码分析</h2><p>主要就是分析一下detection的过程。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_build_detector</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.width = tf.placeholder(tf.float32, name=<span class="string">"img_w"</span>)</span><br><span class="line">    self.height = tf.placeholder(tf.float32, name=<span class="string">"img_h"</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># get class prob, confidence, boxes from net output</span></span><br><span class="line">    idx1 = self.S * self.S * self.C</span><br><span class="line">    idx2 = idx1 + self.S * self.S * self.B</span><br><span class="line">    <span class="comment"># class prediction</span></span><br><span class="line">    <span class="comment"># 这里axis=0的索引为0说明这是test time,只能够一次处理一张照片</span></span><br><span class="line">    class_probs = tf.reshape(self.predicts[<span class="number">0</span>, :idx1], [self.S, self.S, self.C])</span><br><span class="line">    <span class="comment"># confidence</span></span><br><span class="line">    confs = tf.reshape(self.predicts[<span class="number">0</span>, idx1:idx2], [self.S, self.S, self.B])</span><br><span class="line">    <span class="comment"># boxes -&gt; (x, y, w, h)</span></span><br><span class="line">    boxes = tf.reshape(self.predicts[<span class="number">0</span>, idx2:], [self.S, self.S, self.B, <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># convert the x, y to the coordinates relative to the top left point of the image</span></span><br><span class="line">    <span class="comment"># the predictions of w, h are the square root</span></span><br><span class="line">    <span class="comment"># multiply the width and height of image</span></span><br><span class="line">    <span class="comment"># 可以看到这里直接预测值x&amp;y是相对于cell中心坐标的位移值</span></span><br><span class="line">    boxes = tf.stack([(boxes[:, :, :, <span class="number">0</span>] + tf.constant(self.x_offset, dtype=tf.float32)) / self.S * self.width,</span><br><span class="line">                      (boxes[:, :, :, <span class="number">1</span>] + tf.constant(self.y_offset, dtype=tf.float32)) / self.S * self.height,</span><br><span class="line">                      tf.square(boxes[:, :, :, <span class="number">2</span>]) * self.width,</span><br><span class="line">                      tf.square(boxes[:, :, :, <span class="number">3</span>]) * self.height], axis=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># class-specific confidence scores [S, S, B, C]</span></span><br><span class="line">    scores = tf.expand_dims(confs, <span class="number">-1</span>) * tf.expand_dims(class_probs, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    scores = tf.reshape(scores, [<span class="number">-1</span>, self.C])  <span class="comment"># [S*S*B, C]</span></span><br><span class="line">    boxes = tf.reshape(boxes, [<span class="number">-1</span>, <span class="number">4</span>])  <span class="comment"># [S*S*B, 4]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># find each box class, only select the max score</span></span><br><span class="line">    box_classes = tf.argmax(scores, axis=<span class="number">1</span>) <span class="comment"># 每个box的predict class, [98, 1]</span></span><br><span class="line">    box_class_scores = tf.reduce_max(scores, axis=<span class="number">1</span>) <span class="comment"># 每个box的最高scores值, [98, 1]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># filter the boxes by the score threshold</span></span><br><span class="line">    <span class="comment"># 删除scores低于阈值的项</span></span><br><span class="line">    filter_mask = box_class_scores &gt;= self.threshold</span><br><span class="line">    scores = tf.boolean_mask(box_class_scores, filter_mask) <span class="comment"># [N,]</span></span><br><span class="line">    boxes = tf.boolean_mask(boxes, filter_mask) <span class="comment"># [N, 4]</span></span><br><span class="line">    box_classes = tf.boolean_mask(box_classes, filter_mask) <span class="comment"># [N,]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># non max suppression (do not distinguish different classes)</span></span><br><span class="line">    <span class="comment"># ref: https://tensorflow.google.cn/api_docs/python/tf/image/non_max_suppression</span></span><br><span class="line">    <span class="comment"># box (x, y, w, h) -&gt; box (x1, y1, x2, y2)</span></span><br><span class="line">    _boxes = tf.stack([boxes[:, <span class="number">0</span>] - <span class="number">0.5</span> * boxes[:, <span class="number">2</span>], boxes[:, <span class="number">1</span>] - <span class="number">0.5</span> * boxes[:, <span class="number">3</span>],</span><br><span class="line">                       boxes[:, <span class="number">0</span>] + <span class="number">0.5</span> * boxes[:, <span class="number">2</span>], boxes[:, <span class="number">1</span>] + <span class="number">0.5</span> * boxes[:, <span class="number">3</span>]], axis=<span class="number">1</span>) <span class="comment"># # [N, 4]</span></span><br><span class="line">    nms_indices = tf.image.non_max_suppression(_boxes, scores,</span><br><span class="line">                                               self.max_output_size, self.iou_threshold)</span><br><span class="line">    self.scores = tf.gather(scores, nms_indices) <span class="comment"># [?,]</span></span><br><span class="line">    self.boxes = tf.gather(boxes, nms_indices) <span class="comment"># [?, 4]</span></span><br><span class="line">    self.box_classes = tf.gather(box_classes, nms_indices) <span class="comment"># [?,]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>直接预测的坐标值实际上是相对于cell中心的位移值，长宽相对于整张图片，相对于SSD更容易理解。</p>
+</li>
+<li><p>先做score的阈值检查再做非极大值抑制，并没有在每个class空间下处理，导致的结果就是如果两个不同的object的重合度太高就不能够区分开来，如人拿着水杯，这是源码处理的一个取简之处，在运行过程中也有发现这个问题。</p>
+</li>
+<li><p><code>tf.image.non_max_suppression</code>非极大值抑制函数，真是厉害极了，查看官方API说明:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tf.image.non_max_suppression(</span><br><span class="line">    boxes,</span><br><span class="line">    scores,</span><br><span class="line">    max_output_size,</span><br><span class="line">    iou_threshold=<span class="number">0.5</span>,</span><br><span class="line">    score_threshold=float(<span class="string">'-inf'</span>),</span><br><span class="line">    name=<span class="keyword">None</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># 参数实际上都很好的理解，主要就是boxes的坐标表示为左上角坐标和右下角坐标的4维向量</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://arxiv.org/abs/1506.02640" target="_blank" rel="noopener">Paper</a></li>
+<li><a href="https://www.youtube.com/watch?v=L0tzmv--CGY" target="_blank" rel="noopener">油管解析</a></li>
+<li><a href="https://blog.csdn.net/xiaohu2022/article/details/79211732" target="_blank" rel="noopener">CSDN解析</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25053311" target="_blank" rel="noopener">源码解析</a></li>
+<li><a href="https://github.com/hizhangp/yolo_tensorflow">python源代码</a></li>
+</ol>
+<h1 id="YOLO-v2-amp-YOLO9000"><a href="#YOLO-v2-amp-YOLO9000" class="headerlink" title="YOLO v2 &amp; YOLO9000"></a>YOLO v2 &amp; YOLO9000</h1><h2 id="YOLO-v2"><a href="#YOLO-v2" class="headerlink" title="YOLO v2"></a>YOLO v2</h2><p>YOLO最初版主要受限于：小物体的检测、定位的精度和低召回率。以此为目标YOLO v2在设计上进行了改进：</p>
+<ul>
+<li><p><strong>Batch Normalization</strong>：除了最后一层，每一层卷积层后面都加入了BN层</p>
+</li>
+<li><p><strong>High Resolution Classifier</strong>：由于检测需要高分辨率，因此这一步就是将网络改为输入为448*448的分类网络之后先直接在ImageNet上面做微调fine tune。使得分类器适应了高分辨率之后再在detection数据集上进行微调。</p>
+</li>
+<li><p><strong>Convolutional With Anchor Boxes</strong>：使用了archor box，更改输入为416*416，darknet19总的步长为32，因此最后使用的特征图尺度为13×13。这里作者提出<strong>最好使用奇数</strong>是因为这样在图片的中心点有一个cell，大物体更有可能落在图片的中心，有利于大物体的检测。</p>
+<p>和YOLO v1不同的是，这里YOLO类似于SSD为每一个archor box都预测分类score向量（<strong>不包括背景类，但仍然是条件概率</strong>）和5个特征值（4个坐标和Pro(Object)）。使用archor明显的提升了recall。</p>
+</li>
+<li><p><strong>Dimension Clusters</strong>：RPN的先验框尺度是人工选择的，YOLOv2提出使用在所有训练集的边框当中做K-means选出聚类中心来选择更好的先验框尺度。这里由于我们希望我们的先验框能和ground truth有更大的IOU重合，所以这里我们不用欧式距离而使用IOU相对距离，定义如下：</p>
+<p><img src="/images/YOLO/6.PNG" alt="img"></p>
+<p>权衡复杂度和average IOU之后作者选择使用k=5个先验框，并记录聚类中心的dimension(长宽)</p>
+</li>
+<li><p><strong>Direct location prediction</strong>：RPN对于坐标的预测是预测框中心相对于对应的archor box中心的offset值，但是这个修正值的值域并没有限制，这个修正值可以很大从而导致预测框离archor很远，从而给训练带来了困难。因此YOLO v2沿用了YOLO的预测方法，预测值为<strong>预测框中心</strong>相对于cell左上角的位移，而且将位移值使用sigmoid函数修正值(0, 1)的范围；预测框长宽的预测方式不变。</p>
+<p><img src="/images/YOLO/7.png" alt="img"></p>
+<p>CSDN解析中讲到，由于之前的K-means都是在(13, 13)<strong>特征图</strong>上做的，所以这里的4个坐标值也都是特征图上的绝对坐标，实际使用的时候要进行线性变换，这样的道德四个坐标都是(0, 1)的数，也就不用care原图像的分辨率了。这一点我们将在源码分析中主要查看。</p>
+<p><img src="/images/YOLO/8.png" alt="img"></p>
+</li>
+<li><p><strong>Fine-Grained Features</strong>：为了应对小物体的检测问题，学习SSD的多级特征图检测，将最后一个max pooling层的输入(26 × 26 × 512)，引用底层的特征图同时进行检测。代码中先使用shortcut层(1×1卷积)减小维度之后再转化为13×13的分辨率。（-&gt; 26×26×64 -&gt; 13×13×512，串联之后13×13×(1024+512)）。</p>
+</li>
+<li><p><strong>Multi-Scale Training</strong>：这一部分论文中没有过多阐述，详细可参看<a href="https://blog.csdn.net/xiaohu2022/article/details/80666655" target="_blank" rel="noopener">CSDN解析</a>。由于网络只有卷积和pooling层，所以理论上来说网络可以适用各种尺度的输入。再<strong>训练</strong>的时候，作者每隔10个batches就随机更新一种输入的分辨率，不同的输入分辨率都可以使用模型，只不过输出了不同尺度的最终级特征图，实际上对于特征图来说尺度只会影响最后的archor box的个数，对于操作来说并没有什么区别，但是通过不同分辨率的输入，让网络更好的适应了不同分辨率的图片输入。真是厉害极了！</p>
+<p><img src="/images/YOLO/9.png" alt="img"></p>
+</li>
+<li><p><strong>Darknet-19训练过程</strong>：使用了FCN进行分类和检测。先使用Darknet-19在224×224的Imagenet上训练，然后再在448×448的Imagenet上训练，其中加入了典型的训练trick：data augmentation。之后移除最后一层1×1×1000的分类卷积，加入3个3×3×1024的卷积层，并将passthrough layer的输出输入到最后一层3×3卷积当中。最后接一层1×1的卷积做输出。<a href="http://ethereon.github.io/netscope/#/gist/d08a41711e48cf111e330827b1279c31" target="_blank" rel="noopener">网络可视化</a></p>
+</li>
+</ul>
+<p><img src="/images/YOLO/10.png" alt="img"></p>
+<ul>
+<li>具体训练过程，包括损失函数，参看<a href="https://blog.csdn.net/xiaohu2022/article/details/80666655" target="_blank" rel="noopener">CSDN解析</a>，损失函数的分析很仔细。</li>
+</ul>
+<h2 id="YOLO9000"><a href="#YOLO9000" class="headerlink" title="YOLO9000"></a>YOLO9000</h2><p>YOLO实际上物体坐标的检测并不依赖于分类，所以作者认为可以将分类数据集（Imagenet）和检测数据集（COCO）联合训练以提升检测的物体数量。</p>
+<ul>
+<li><strong>Hierarchical classification</strong>：将wordnet的有向图结果转化为wordtree，将其中有多条路径的结点选择其中最短的一条添加到树结构中。这样卷积得到的预测值<strong>物体的置信度</strong>实际上就是<strong>Prob(Physical Object)</strong>，每一个结点都是一个条件概率。每次预测检查每一条path，选择概率最高的一条，一直往下直到条件概率的乘积低于阈值，将终点类作为当前的预测结果。</li>
+<li><strong>Jointly Training</strong>：遇到检测数据集的数据就正常后向（包括objectness，bbox和classification loss），但是如果遇到分类数据的话，就粗略地找到一个bbox然后以此作为“标记好的”bbox后向（只包括classification和objectness loss，没有bbox），其中将IOU（即<strong>Prob(Physical Object)</strong>）设为0.3。</li>
+</ul>
+<h2 id="tensorflow源码分析-1"><a href="#tensorflow源码分析-1" class="headerlink" title="tensorflow源码分析"></a>tensorflow源码分析</h2><ul>
+<li>先来看一下卷积层的定义</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">conv2d</span><span class="params">(x, filters, size, pad=<span class="number">0</span>, stride=<span class="number">1</span>, batch_normalize=<span class="number">1</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">           activation=leaky_relu, use_bias=False, name=<span class="string">"conv2d"</span>)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> pad &gt; <span class="number">0</span>:</span><br><span class="line">        x = tf.pad(x, [[<span class="number">0</span>, <span class="number">0</span>], [pad, pad], [pad, pad], [<span class="number">0</span>, <span class="number">0</span>]])</span><br><span class="line">    <span class="comment"># 在BN层之后输入激活函数</span></span><br><span class="line">    out = tf.layers.conv2d(x, filters, size, strides=stride, padding=<span class="string">"VALID"</span>,</span><br><span class="line">                           activation=<span class="keyword">None</span>, use_bias=use_bias, name=name)</span><br><span class="line">    <span class="keyword">if</span> batch_normalize == <span class="number">1</span>:</span><br><span class="line">        out = tf.layers.batch_normalization(out, axis=<span class="number">-1</span>, momentum=<span class="number">0.9</span>,</span><br><span class="line">                                            training=<span class="keyword">False</span>, name=name+<span class="string">"_bn"</span>)</span><br><span class="line">    <span class="keyword">if</span> activation:</span><br><span class="line">        out = activation(out)</span><br><span class="line">    <span class="keyword">return</span> out</span><br></pre></td></tr></table></figure>
+<p>可以发现在每一个卷积层（除了最后的输出卷积层）在激活函数之前都加入了BN层，控制训练防止过拟合</p>
+<ul>
+<li>再看一下decode的过程</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decode</span><span class="params">(detection_feat, feat_sizes=<span class="params">(<span class="number">13</span>, <span class="number">13</span>)</span>, num_classes=<span class="number">80</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">           anchors=None)</span>:</span></span><br><span class="line">    H, W = feat_sizes <span class="comment"># (13, 13)</span></span><br><span class="line">    num_anchors = len(anchors) <span class="comment"># 5</span></span><br><span class="line">    <span class="comment"># [1, 13, 13, 425] -&gt; [1, 13*13, 5, 85]</span></span><br><span class="line">    detetion_results = tf.reshape(detection_feat, [<span class="number">-1</span>, H * W, num_anchors,</span><br><span class="line">                                        num_classes + <span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">    bbox_xy = tf.nn.sigmoid(detetion_results[:, :, :, <span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line">    bbox_wh = tf.exp(detetion_results[:, :, :, <span class="number">2</span>:<span class="number">4</span>])</span><br><span class="line">    obj_probs = tf.nn.sigmoid(detetion_results[:, :, :, <span class="number">4</span>])</span><br><span class="line">    class_probs = tf.nn.softmax(detetion_results[:, :, :, <span class="number">5</span>:])</span><br><span class="line"></span><br><span class="line">    anchors = tf.constant(anchors, dtype=tf.float32) <span class="comment"># [5, 2]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 这里的height和width都是特征图的尺度</span></span><br><span class="line">    height_ind = tf.range(H, dtype=tf.float32)</span><br><span class="line">    width_ind = tf.range(W, dtype=tf.float32)</span><br><span class="line">    x_offset, y_offset = tf.meshgrid(height_ind, width_ind)</span><br><span class="line">    x_offset = tf.reshape(x_offset, [<span class="number">1</span>, <span class="number">-1</span>, <span class="number">1</span>])</span><br><span class="line">    y_offset = tf.reshape(y_offset, [<span class="number">1</span>, <span class="number">-1</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># decode</span></span><br><span class="line">    bbox_x = (bbox_xy[:, :, :, <span class="number">0</span>] + x_offset) / W</span><br><span class="line">    bbox_y = (bbox_xy[:, :, :, <span class="number">1</span>] + y_offset) / H</span><br><span class="line">    <span class="comment"># 这里除以2是为了下面不用除了</span></span><br><span class="line">    bbox_w = bbox_wh[:, :, :, <span class="number">0</span>] * anchors[:, <span class="number">0</span>] / W * <span class="number">0.5</span></span><br><span class="line">    bbox_h = bbox_wh[:, :, :, <span class="number">1</span>] * anchors[:, <span class="number">1</span>] / H * <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line">    bboxes = tf.stack([bbox_x - bbox_w, bbox_y - bbox_h,</span><br><span class="line">                       bbox_x + bbox_w, bbox_y + bbox_h], axis=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># bboxes: [1, 13*13, 5, 4]</span></span><br><span class="line">    <span class="comment"># obj_probs: [1, 13*13, 5, 1]</span></span><br><span class="line">    <span class="comment"># class_probs: [1, 13*13, 5, 80]</span></span><br><span class="line">    <span class="keyword">return</span> bboxes, obj_probs, class_probs</span><br></pre></td></tr></table></figure>
+<p>过程相对SSD来说就非常直接了，真正的是预测的是offset的值。</p>
+<ul>
+<li>来看一下YOLO的图像预处理</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preprocess_image</span><span class="params">(image, image_size=<span class="params">(<span class="number">416</span>, <span class="number">416</span>)</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Preprocess a image to inference"""</span></span><br><span class="line">    image_cp = np.copy(image).astype(np.float32)</span><br><span class="line">    <span class="comment"># resize the image</span></span><br><span class="line">    image_rgb = cv2.cvtColor(image_cp, cv2.COLOR_BGR2RGB)</span><br><span class="line">    image_resized = cv2.resize(image_rgb, image_size)</span><br><span class="line">    <span class="comment"># normalize</span></span><br><span class="line">    image_normalized = image_resized.astype(np.float32) / <span class="number">255.0</span> <span class="comment"># [0, 1]</span></span><br><span class="line">    <span class="comment"># expand the batch_size dim</span></span><br><span class="line">    image_expanded = np.expand_dims(image_normalized, axis=<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> image_expanded</span><br></pre></td></tr></table></figure>
+<p>可以发现YOLO的预处理不需要均值归0，即最终的图像数据的取值范围为(0, 1)，而SSD是改至(-1, 1)的。</p>
+<ul>
+<li>看一下loss函数（和上面的demo应该不是一起的，有一些细节上有出入）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_loss</span><span class="params">(predictions, targets, anchors, scales, num_classes=<span class="number">20</span>, feat_sizes=<span class="params">(<span class="number">13</span>, <span class="number">13</span>)</span>)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    Compute the loss of Yolov2 for training</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    H, W = feat_sizes</span><br><span class="line">    C = num_classes</span><br><span class="line">    B = len(anchors)</span><br><span class="line">    anchors = tf.constant(anchors, dtype=tf.float32)</span><br><span class="line">    anchors = tf.reshape(anchors, [<span class="number">1</span>, <span class="number">1</span>, B, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">    sprob, sconf, snoob, scoor = scales  <span class="comment"># the scales for different parts</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 实际上可以根据_confs来判断，如果是1那么_coords和_probs的值有效</span></span><br><span class="line">    <span class="comment"># 否则无效，也有可能是0吧</span></span><br><span class="line">    _coords = targets[<span class="string">"coords"</span>]  <span class="comment"># ground truth [-1, H*W, B, 4]</span></span><br><span class="line">    _probs = targets[<span class="string">"probs"</span>]    <span class="comment"># class probability [-1, H*W, B, C] one hot，对于YOLO来说background不算在里面</span></span><br><span class="line">    _confs = targets[<span class="string">"confs"</span>]    <span class="comment"># 1 for object, 0 for background, [-1, H*W, B]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># decode the net output</span></span><br><span class="line">    predictions = tf.reshape(predictions, [<span class="number">-1</span>, H, W, B, (<span class="number">5</span> + C)])</span><br><span class="line">    coords = predictions[:, :, :, :, <span class="number">0</span>:<span class="number">4</span>]   <span class="comment"># t_x, t_y, t_w, t_h</span></span><br><span class="line">    coords = tf.reshape(coords, [<span class="number">-1</span>, H*W, B, <span class="number">4</span>])</span><br><span class="line">    <span class="comment"># x,y,w,h全部落在了0-1之间</span></span><br><span class="line">    coords_xy = tf.nn.sigmoid(coords[:, :, :, <span class="number">0</span>:<span class="number">2</span>])  <span class="comment"># (0, 1) relative cell top left</span></span><br><span class="line">    coords_wh = tf.sqrt(tf.exp(coords[:, :, :, <span class="number">2</span>:<span class="number">4</span>]) * anchors /</span><br><span class="line">                        np.reshape([W, H], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])) <span class="comment"># sqrt of w, h (0, 1)</span></span><br><span class="line">    coords = tf.concat([coords_xy, coords_wh], axis=<span class="number">3</span>)  <span class="comment"># [batch_size, H*W, B, 4]</span></span><br><span class="line"></span><br><span class="line">    confs = tf.nn.sigmoid(predictions[:, :, :, :, <span class="number">4</span>])  <span class="comment"># object confidence</span></span><br><span class="line">    confs = tf.reshape(confs, [<span class="number">-1</span>, W * H, B, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    probs = tf.nn.softmax(predictions[:, :, :, :, <span class="number">5</span>:])  <span class="comment"># class probability</span></span><br><span class="line">    probs = tf.reshape(probs, [<span class="number">-1</span>, H*W, B, C])</span><br><span class="line"></span><br><span class="line">    preds = tf.concat([coords, confs, probs], axis=<span class="number">3</span>)  <span class="comment"># [-1, H*W, B, (4+1+C)]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># match ground truths with anchors (predictions in fact)</span></span><br><span class="line">    <span class="comment"># assign ground truths to the predictions with the best IOU (select 1 among 5 anchors)</span></span><br><span class="line">    <span class="comment"># 应该是和YOLO v1相同将w和h取了平方根</span></span><br><span class="line">    wh = tf.pow(coords[:, :, :, <span class="number">2</span>:<span class="number">4</span>], <span class="number">2</span>) * np.reshape([W, H], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">    areas = wh[:, :, :, <span class="number">0</span>] * wh[:, :, :, <span class="number">1</span>]</span><br><span class="line">    centers = coords[:, :, :, <span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    <span class="comment"># 左上点和右下点的坐标</span></span><br><span class="line">    up_left, down_right = centers - (wh * <span class="number">0.5</span>), centers + (wh * <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># the ground truth</span></span><br><span class="line">    _wh = tf.pow(_coords[:, :, :, <span class="number">2</span>:<span class="number">4</span>], <span class="number">2</span>) * np.reshape([W, H], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">    _areas = _wh[:, :, :, <span class="number">0</span>] * _wh[:, :, :, <span class="number">1</span>]</span><br><span class="line">    _centers = _coords[:, :, :, <span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">    _up_left, _down_right = _centers - (_wh * <span class="number">0.5</span>), _centers + (_wh * <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># compute IOU</span></span><br><span class="line">    inter_upleft = tf.maximum(up_left, _up_left)</span><br><span class="line">    inter_downright = tf.minimum(down_right, _down_right)</span><br><span class="line">    inter_wh = tf.maximum(inter_downright - inter_upleft, <span class="number">0.0</span>)</span><br><span class="line">    intersects = inter_wh[:, :, :, <span class="number">0</span>] * inter_wh[:, :, :, <span class="number">1</span>]</span><br><span class="line">    ious = tf.truediv(intersects, areas + _areas - intersects)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># axis = 2,是在B这个维度上来说的，也就是说对于feature map上的这个cell的B个archor box选择一个IOU最大的</span></span><br><span class="line">    <span class="comment"># 也就是说YOLO仍然是将cell和gt匹配，而不是archor和gt匹配</span></span><br><span class="line">    best_iou_mask = tf.equal(ious, tf.reduce_max(ious, axis=<span class="number">2</span>, keep_dims=<span class="keyword">True</span>))</span><br><span class="line">    best_iou_mask = tf.cast(best_iou_mask, tf.float32)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 经过这次计算，所有有ground truth的archor的预测bbox和gt的bbox的IOU都得到了</span></span><br><span class="line">    mask = best_iou_mask * _confs  <span class="comment"># [-1, H*W, B]</span></span><br><span class="line">    mask = tf.expand_dims(mask, <span class="number">-1</span>)  <span class="comment"># [-1, H*W, B, 1]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># compute weight terms</span></span><br><span class="line">    <span class="comment"># [-1, H*W, B, 1]</span></span><br><span class="line">    confs_w = snoob * (<span class="number">1</span> - mask) + sconf * mask</span><br><span class="line">    coords_w = scoor * mask</span><br><span class="line">    probs_w = sprob * mask</span><br><span class="line">    weights = tf.concat([coords_w, confs_w, probs_w], axis=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    truths = tf.concat([_coords, tf.expand_dims(_confs, <span class="number">-1</span>), _probs], <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    loss = tf.pow(preds - truths, <span class="number">2</span>) * weights</span><br><span class="line">    loss = tf.reduce_sum(loss, axis=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">    loss = <span class="number">0.5</span> * tf.reduce_mean(loss)</span><br><span class="line">    <span class="keyword">return</span> loss</span><br></pre></td></tr></table></figure>
+<ul>
+<li>主要思路还是很简单，将gt和prediction 使用相同的方式进行解码之后做L2 loss，仍然是一个典型的回归模型，但是这里的权重生成过程很迷，但是其中很大程度上都依赖于<strong>predict box和gt的IOU值</strong>。</li>
+<li>还有和SSD很大的不同是，YOLO仍然是将gt和cell相匹配（即使是在特征图上），一个cell之匹配一个gt，一个gt也只匹配一个cell，所以loss在解码之前，先选择了每个cell的B个predict box和对应的gt的IOU最大的那一个框进行loss的计算。</li>
+<li>还有就是和YOLO v1相同的一点是，计算loss的时候将w和h先取了平方根。</li>
+</ul>
+<h2 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://blog.csdn.net/xiaohu2022/article/details/80666655" target="_blank" rel="noopener">CSDN解析</a></li>
+<li><a href="https://towardsdatascience.com/training-object-detection-yolov2-from-scratch-using-cyclic-learning-rates-b3364f7e4755" target="_blank" rel="noopener">Training 过程解析</a></li>
+<li><a href="https://docs.google.com/presentation/d/14qBAiyhMOFl_wZW4dA1CkixgXwf0zKGbpw_0oHK8yEM/edit#slide=id.p" target="_blank" rel="noopener">YOLO9000 talk</a></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------That's the end of this passage<i class="fa fa-paw"></i>-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Object-Detection/" rel="tag"><i class="fa fa-tag"></i> Object Detection</a>
+          
+            <a href="/tags/Paper-Reading/" rel="tag"><i class="fa fa-tag"></i> Paper Reading</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Tensorflow.html" rel="next" title="Tensorflow Notes">
+                <i class="fa fa-chevron-left"></i> Tensorflow Notes
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/R-CNN.html" rel="prev" title="R-CNN">
+                R-CNN <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Kai Chen">
+            
+              <p class="site-author-name" itemprop="name">Kai Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/KaiChen1998" title="GitHub &rarr; https://github.com/KaiChen1998"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.facebook.com/profile.php?id=100028339790836" title="FB Page &rarr; https://www.facebook.com/profile.php?id=100028339790836" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.linkedin.com/in/kai-chen1998/" title="Linkedin &rarr; https://www.linkedin.com/in/kai-chen1998/" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:kchen16@fudan.edu.cn" title="E-Mail &rarr; mailto:kchen16@fudan.edu.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#YOLO-You-Only-Look-Once"><span class="nav-number">1.</span> <span class="nav-text">YOLO: You Only Look Once</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-Idea"><span class="nav-number">1.1.</span> <span class="nav-text">Main Idea</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing"><span class="nav-number">1.2.</span> <span class="nav-text">Testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Non-maximal-suppression（非极大值抑制）"><span class="nav-number">1.2.1.</span> <span class="nav-text">Non-maximal suppression（非极大值抑制）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training"><span class="nav-number">1.3.</span> <span class="nav-text">Training</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Network"><span class="nav-number">1.3.1.</span> <span class="nav-text">Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Loss-Function"><span class="nav-number">1.3.2.</span> <span class="nav-text">Loss Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process"><span class="nav-number">1.3.3.</span> <span class="nav-text">Process</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tensorflow源码分析"><span class="nav-number">1.4.</span> <span class="nav-text">tensorflow源码分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.5.</span> <span class="nav-text">Reference</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#YOLO-v2-amp-YOLO9000"><span class="nav-number">2.</span> <span class="nav-text">YOLO v2 &amp; YOLO9000</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YOLO-v2"><span class="nav-number">2.1.</span> <span class="nav-text">YOLO v2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YOLO9000"><span class="nav-number">2.2.</span> <span class="nav-text">YOLO9000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tensorflow源码分析-1"><span class="nav-number">2.3.</span> <span class="nav-text">tensorflow源码分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference-1"><span class="nav-number">2.4.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kai Chen</span>
+
+  
+
+  
+</div>
+
+<!--
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.6.0</div>
+
+
+
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">Blog words total counts: 24k</span>
+</div>
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
