@@ -10,7 +10,7 @@ main:
     url: /research/
         
   - title: "Blog"
-    url: /blog/index/
+    url: /blog/index.html
     
   - title: "CV"
     url: /cv/
