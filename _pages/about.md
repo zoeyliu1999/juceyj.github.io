@@ -13,7 +13,7 @@ redirect_from:
 Bsc. @ Fudan University, Computer Science School
 Research Interest: Social Network Data Mining / Computer Vision / Machine Learning
 
-Contact: email is the preferred way to contact me kchen16@fudan.edu.cn
+Contact: email is the preferred way to contact me <kchen16@fudan.edu.cn>
 
 
 
