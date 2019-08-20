@@ -5,6 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-### Forthcomming
+# Publications
 
-Shiva Taslimipoor, Omid Rohanian, Le An Ha: Cross-lingual Transf
+- Md Alimoor Reza, Akshay Naik, **Kai Chen**, David Crandall, "Automatic Annotation for Semantic Segmentation in Indoor Scenes," *IEEE International Conference on Intelligent Robots and Systems (IROS), 2019*
+
