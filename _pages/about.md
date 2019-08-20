@@ -11,6 +11,7 @@ redirect_from:
 # Kai Chen
 
 Bsc. @ Fudan University, Computer Science School
+
 Research Interest: Social Network Data Mining / Computer Vision / Machine Learning
 
 Contact: email is the preferred way to contact me [kchen16@fudan.edu.cn](<mailto:kchen16@fudan.edu.cn>)
@@ -32,23 +33,23 @@ In summer 2019, I was so glad to join [Prof. David Crandall](https://cs.indiana.
 # Honor
 
 - China National Scholarship, 2018 (1%)
-
+  
   Ministry of Education of P.R.China
 
 - Joel & Ruth Spira Scholarship, 2019 (1%)
-
+  
   Lutron Electronics
 
 - Fudan University Scholarship for Outstanding Undergraduate Students, 2017 (5%)
-
+  
   Fudan University
 
 - Outstanding undergraduate of Fudan University, 2018 & 2017
-
+  
   Fudan University
 
 - 1st Prize - "ChuangQingChun" Enterprising Competition FDU Division, 2017
-
+  
   Fudan University
 
 
