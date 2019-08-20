@@ -1,12 +1,12 @@
 ---
 layout: archive
-title: "Curriculum vitae"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+# Curriculum vitae
 
 You can download my CV [from this link](https://kaichen1998.github.io/files/CV_of_Kai_Chen.pdf).
