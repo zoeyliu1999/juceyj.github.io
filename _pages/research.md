@@ -2,9 +2,6 @@
 permalink: /research/
 title: ""
 author_profile: true
-redirect_from: 
-  - /research/
-  - /research.html
 ---
 
 # Automatic Annotation for Semantic Segmentation in Indoor Scenes
