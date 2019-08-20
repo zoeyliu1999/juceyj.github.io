@@ -10,3 +10,4 @@ redirect_from:
 # Curriculum vitae
 
 You can download my CV [from this link](https://kaichen1998.github.io/files/CV_of_Kai_Chen.pdf).
+

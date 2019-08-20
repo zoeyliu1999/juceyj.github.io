@@ -57,50 +57,13 @@ In summer 2019, I was so glad to join [Prof. David Crandall](https://cs.indiana.
 
 I love basketball and I'm also a big fan of [Stepfen Curry](https://zh.wikipedia.org/wiki/%E6%96%AF%E8%92%82%E8%8A%AC%C2%B7%E7%A7%91%E9%87%8C), MVP point guard of Golden State Warriors, NBA. I'm a team member of my class's basketball team and often play **Score / Power forward (SF/PF)**. In my spare time, I also play the role of a **basketball game referee**. Hope one day I can have a chance to see a home game of Warriors in Chase Center San Francisco!
 
-<a style="float:left;"><img border=0 src="https://kaichen1998.github.io/images/about/1.jpg"></a><a style="float:left;"><img border=0 src="https://kaichen1998.github.io/images/about/2.jpg"></a>
-
-
-
 <table>
 <tr>
 <td>
-<a><img src=""></a>
+<a><img src="https://kaichen1998.github.io/images/about/1.jpg"></a>
 </td>
 <td>
-<a><img src=""></a>
+<a><img src="https://kaichen1998.github.io/images/about/2.jpg"></a>
 </td>
 </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="https://kaichen1998.github.io/images/about/1.jpg" style='width:200px float:left'></img>
-<img src="https://kaichen1998.github.io/images/about/2.jpg" style='width:100%; float:left;margin-left:-6px'></img>
