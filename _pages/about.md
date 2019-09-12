@@ -20,7 +20,7 @@ Contact: email is the preferred way to contact me [kchen16@fudan.edu.cn](<mailto
 
 # Biography
 
-I'm a four-year undergraduate student (expected to graduate at June 2019) majoring in Computer Science in Fudan University. I'm now supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP Laboratory](<https://github.com/FudanNLP>). 
+I'm a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University. I'm now supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP Laboratory](<https://github.com/FudanNLP>). 
 
 I joined in [Shanghai Key Laboratory of Data Science](https://datascience.fudan.edu.cn/) in my sophomore year supervised by [Prof. Yitong Wang](https://datascience.fudan.edu.cn/e1/64/c13398a123236/page.htm) and start my research in machine learning and social network data mining. Focusing on link prediction on Weighted Signed Social Network, we successfully built a new algorithm called MFLG and summarized our work in a paper. See details in my CV.
 
