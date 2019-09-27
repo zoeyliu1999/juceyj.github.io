@@ -34,19 +34,24 @@ Now I'm applying for a PhD program in Computer Vision and Artificial Intelligenc
 
 # Honor
 
-- Chinese National Scholarship, 2018 (1%) // 
+- Chinese National Scholarship, 2018 (1%)
+
   Ministry of Education of P.R.China
 
-- Joel & Ruth Spira Scholarship, 2019 (1%) //
+- Joel & Ruth Spira Scholarship, 2019 (1%)
+
   Lutron Electronics
 
-- Fudan University Scholarship for Outstanding Undergraduate Students, 2017 (5%) //
+- Fudan University Scholarship for Outstanding Undergraduate Students, 2017 (5%)
+
   Fudan University
 
-- Outstanding undergraduate of Fudan University, 2018 & 2017 //
+- Outstanding undergraduate of Fudan University, 2018 & 2017
+
   Fudan University
 
-- 1st Prize - "ChuangQingChun" Enterprising Competition FDU Division, 2017 //
+- 1st Prize - "ChuangQingChun" Enterprising Competition FDU Division, 2017
+
   Fudan University
 
 
