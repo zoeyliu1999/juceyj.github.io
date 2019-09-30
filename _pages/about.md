@@ -20,20 +20,15 @@ My research interests include Computer Vision and Machine Learning, especially i
 
 - Sep 2020 - June 2025 (Expected), Ph.D. in Computer Science
   <br /> [CSE, Hong Kong University of Science and Technology (HKUST)](https://www.cse.ust.hk/), Hong Kong, China
-
 - Sep 2016 - June 2020, B.S. in Computer Science
   <br /> [School of Computer Science, Fudan University](http://www.cs.fudan.edu.cn/), Shanghai, China
   <br /> Advisor: [Prof. Xipeng Qiu](http://homepage.fudan.edu.cn/xpqiu/)
-
 - June 2019 - Sep 2019, Visiting Student
   <br /> [Computer Vision Lab, SICE, Indiana University Bloomington](http://vision.soic.indiana.edu/), Indiana, USA
   <br /> Advisor: [Prof. David Crandall](https://www.cs.indiana.edu/~djcran/)
-
 - Sep 2018, Jan 2019, Exchange Student
   <br /> [Department of Computer Science, University of Manchester](https://www.cs.manchester.ac.uk/), Manchester, UK
   <br /> Advisor: [Dr. Tingting Mu](https://personalpages.manchester.ac.uk/staff/tingting.mu/Site/About_Me.html)
-
-
 
 # Experience
 
