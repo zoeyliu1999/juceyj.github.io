@@ -8,51 +8,45 @@ redirect_from:
   - /about.html
 ---
 
-# Kai Chen
+# Introduction
 
-Bsc. @ Fudan University, Computer Science School
+I am a coming PhD student in Hong Kong University of Science and Technology (HKUST) Computer Science and Engineer Department in Sep 2020. Before that, I am currently a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP Laboratory](<https://github.com/FudanNLP>). 
 
-Research Interest: Social Network Data Mining / Computer Vision / Machine Learning
-
-Contact: email is the preferred way to contact me [kchen16@fudan.edu.cn](<mailto:kchen16@fudan.edu.cn>)
+My research interests include Computer Vision and Machine Learning, especially in few shot learning, weakly supervised vision problems and specific vision applications.
 
 
 
-# Biography
+# Education
 
-I'm a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University. I'm now supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP Laboratory](<https://github.com/FudanNLP>). 
+- Sep 2020 - June 2025 (Expected), Ph.D. in Computer Science
 
-I joined in [Shanghai Key Laboratory of Data Science](https://datascience.fudan.edu.cn/) in my sophomore year supervised by [Prof. Yitong Wang](https://datascience.fudan.edu.cn/e1/64/c13398a123236/page.htm) and start my research in machine learning and social network data mining. Focusing on link prediction on Weighted Signed Social Network, we successfully built a new algorithm called MFLG and summarized our work in a paper. See details in my CV.
+  Computer Science and Engineering, Hong Kong University of Science and Technology (HKUST), Hong Kong, China
 
-In my junior year, I was lucky to be an exchange student in [the University of Manchester](http://www.cs.manchester.ac.uk/) from Sep, 2018 to Jan, 2019. This year I started my work in Computer Vision, especially in **object detection and segmentation**. We did a project  focusing on unsupervised object detection based on VAE & RNN and tried to do this job in more realistic images. 
+- Sep 2016 - June 2020, B.S. in Computer Science
 
-In summer 2019, I was so glad to join [Prof. David Crandall](https://cs.indiana.edu/~djcran/) 's great [IU Computer Vision Lab](http://vision.soic.indiana.edu/people/). I was focusing on automatic semantic segmentation and human-inspired computer vision and neuroscience. During this period, I successfully published my first paper on IROS19. Thanks to my co-authors!
+  School of Computer Science, Fudan University, Shanghai, China
 
-Now I'm applying for a PhD program in Computer Vision and Artificial Intelligence and trying to solve more realistic problems in our daily life using AI technique!
+  Advisor: Prof. Xipeng Qiu
+
+- June 2019 - Sep 2019, Visiting Student
+
+  Computer Vision Lab, SICE, Indiana University Bloomington, Indiana, USA
+
+  Advisor: Prof. David Crandall
+
+- Sep 2018, Jan 2019, Exchange Student
+
+  Department of Computer Science, University of Manchester, Manchester, UK
+
+  Advisor: Dr. Tingting Mu
 
 
 
-# Honor
+# Experience
 
-- Chinese National Scholarship, 2018 (1%)
+- Research Intern, SenseTime, Shanghai, Oct. 2019 - Present
 
-  Ministry of Education of P.R.China
-
-- Joel & Ruth Spira Scholarship, 2019 (1%)
-
-  Lutron Electronics
-
-- Fudan University Scholarship for Outstanding Undergraduate Students, 2017 (5%)
-
-  Fudan University
-
-- Outstanding undergraduate of Fudan University, 2018 & 2017
-
-  Fudan University
-
-- 1st Prize - "ChuangQingChun" Enterprising Competition FDU Division, 2017
-
-  Fudan University
+  Advisor: Dr. Wenxiu Sun
 
 
 
