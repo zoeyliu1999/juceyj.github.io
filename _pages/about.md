@@ -10,7 +10,7 @@ redirect_from:
 
 # Introduction
 
-I am a coming PhD student in Hong Kong University of Science and Technology (HKUST) Computer Science and Engineer Department (CSE) in Sep 2020. Before that, I am currently a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP Laboratory](<https://github.com/FudanNLP>). 
+I am a coming PhD student in Hong Kong University of Science and Technology (HKUST) Computer Science and Engineer Department (CSE) in Sep 2020. Before that, I am currently a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP](<https://github.com/FudanNLP>). 
 
 My research interests include Computer Vision and Machine Learning, especially in few shot learning, weakly supervised vision problems and specific vision applications.
 
@@ -23,7 +23,7 @@ My research interests include Computer Vision and Machine Learning, especially i
 - Sep 2016 - June 2020, B.S. in Computer Science
   <br /> [School of Computer Science, Fudan University](http://www.cs.fudan.edu.cn/), Shanghai, China
   <br /> Advisor: [Prof. Xipeng Qiu](http://homepage.fudan.edu.cn/xpqiu/)
-- June 2019 - Sep 2019, Visiting Student
+- June 2019 - Sep 2019, Visiting Scholar
   <br /> [Computer Vision Lab, SICE, Indiana University Bloomington](http://vision.soic.indiana.edu/), Indiana, USA
   <br /> Advisor: [Prof. David Crandall](https://www.cs.indiana.edu/~djcran/)
 - Sep 2018, Jan 2019, Exchange Student
