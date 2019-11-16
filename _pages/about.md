@@ -10,7 +10,7 @@ redirect_from:
 
 # Introduction
 
-I am a coming PhD student in Hong Kong University of Science and Technology (HKUST) Computer Science and Engineer Department (CSE) in Sep 2020. Before that, I am currently a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP](<https://github.com/FudanNLP>). 
+I am a coming PhD student in Hong Kong University of Science and Technology (HKUST) Computer Science and Engineer Department (CSE) in Sep 2020, co-advised by [Prof. Qifeng Chen](https://cqf.io/) and [Prof. Dit-Yan Yeung](https://sites.google.com/view/dyyeung/home?authuser=0). Before that, I am currently a four-year undergraduate student (expected to graduate at June 2020) majoring in Computer Science in Fudan University supervised by [Prof. Xipeng Qiu](<http://homepage.fudan.edu.cn/xpqiu/>) at [FudanNLP](<https://github.com/FudanNLP>). 
 
 My research interests include Computer Vision and Machine Learning, especially in few shot learning, weakly supervised vision problems and specific vision applications.
 
