@@ -20,6 +20,7 @@ My research interests include Computer Vision and Machine Learning, especially i
 
 - Sep 2020 - June 2025 (Expected), Ph.D. in Computer Science
   <br /> [CSE, Hong Kong University of Science and Technology (HKUST)](https://www.cse.ust.hk/), Hong Kong, China
+  <br /> Advisor: [Prof. Qifeng Chen](https://cqf.io/) and [Prof. Dit-Yan Yeung](https://sites.google.com/view/dyyeung/home?authuser=0)
 - Sep 2016 - June 2020, B.S. in Computer Science
   <br /> [School of Computer Science, Fudan University](http://www.cs.fudan.edu.cn/), Shanghai, China
   <br /> Advisor: [Prof. Xipeng Qiu](http://homepage.fudan.edu.cn/xpqiu/)
