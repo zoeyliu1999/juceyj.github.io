@@ -1,5 +1,5 @@
 ---
-layout: archive-taxonomy
+layout: talk
 title: 'Kiku Ju'
 permalink: /blog/Kiku_Ju/
 ---
