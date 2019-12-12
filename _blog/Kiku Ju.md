@@ -1,4 +1,5 @@
 ---
+layout: archive
 title: 'Kiku Ju'
 permalink: /blog/Kiku_Ju/
 ---
