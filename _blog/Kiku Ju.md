@@ -1,6 +1,7 @@
 ---
-layout: talk
+layout: archive
 title: 'Kiku Ju'
+author_profile: true
 permalink: /blog/Kiku_Ju/
 ---
 
