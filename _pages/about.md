@@ -24,10 +24,7 @@ My research interests include Computer Vision and Machine Learning, especially i
 
 - Sep 2016 - June 2020, B.S. in Computer Science
   <br /> [School of Computer Science, Fudan University](http://www.cs.fudan.edu.cn/), Shanghai, China
-
-  <br />
-
-  Advisor: [Prof. Yanwei Fu](<https://yanweifu.github.io/>)
+  <br /> Advisor: [Prof. Yanwei Fu](<https://yanweifu.github.io/>)
 
 - June 2019 - Sep 2019, Visiting Scholar
   <br /> [Computer Vision Lab, SICE, Indiana University Bloomington](http://vision.soic.indiana.edu/), Indiana, USA
