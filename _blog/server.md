@@ -41,11 +41,11 @@ permalink: /blog/server/
     - /l/vision/v6/kaichen/anaconda/pkgs
   ```
 
-- bash_profile
+- bashrc
 
   ```bash
   # 登陆的默认操作
-  vim .bash_profile
+  vim .bashrc
   ```
 
 - 服务器下载并使用dropbox
@@ -80,7 +80,8 @@ permalink: /blog/server/
   # ctrl + a + d 将screen置入后台运行，期间可以logout服务器
   
   $ screen -ls
-  $ screen -r #process_id
+  $ screen -r # process_id
+  $ screen -L # Log screen
   ```
 
 - python添加环境变量
@@ -106,6 +107,7 @@ permalink: /blog/server/
 
   ```bash
   export CUDA_VISIBLE_DEVICES=ID
+  os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
   ```
 
 - 清楚process结束之后仍然继续占用GPU的进程
@@ -115,5 +117,17 @@ permalink: /blog/server/
   kill process_id
   ```
 
+- pytorch要求gcc版本>4.9.0，因此在安装pytorch之前我们要先用conda安装gcc
+
+  ```bash
+  conda install -c serge-sans-paille gcc_49
   
+  # 增加软链
+  ln -s /home/chenjoya/opt/anaconda3/envs/graph-retina-rcnn/bin/gcc-4.9 /home/chenjoya/opt/anaconda3/envs/graph-retina-rcnn/bin/gcc  
+  ln -s /home/chenjoya/opt/anaconda3/envs/graph-retina-rcnn/bin/g++-4.9 /home/chenjoya/opt/anaconda3/envs/graph-retina-rcnn/bin/g++
+  
+  # 之后只要将conda的根目录放在$PATH里面的/usr/bin之前就好
+  ```
+
+- 安装pytorch只要匹配CUDA版本就好，CUDNN官方会帮你安
 
