@@ -131,3 +131,112 @@ permalink: /blog/server/
 
 - 安装pytorch只要匹配CUDA版本就好，CUDNN官方会帮你安
 
+
+
+# COCO
+
+- pycocotool的安装
+
+  ```bash
+  $ conda install cython
+  $ git clone https://github.com/pdollar/coco.git
+  $ cd coco/PythonAPI
+  $ make
+  $ python setup.py install
+  ```
+
+- 训练集大小118287；验证集大小5000
+
+- object instance.json
+
+  ```bash
+  # json文件总体格式
+  # categories代表80个物体类别
+  {
+      "info": info,
+      "licenses": [license],
+      "images": [image],
+      "annotations": [annotation],
+      "categories": [category]
+  }
+  
+  # annotation格式
+  # 单个的对象（iscrowd=0)polygon，而iscrowd=1时（将标注一组对象，比如一群人）使用RLE格式。
+  # segmentation polygon使用的每个polygon点的两维坐标（精确到小数点后两位）
+  # RLE其实就是一个稀疏矩阵向量表示
+  annotation{
+      "id": int,    
+      "image_id": int,
+      "category_id": int,
+      "segmentation": RLE or [polygon],
+      "area": float,
+      "bbox": [x,y,width,height],
+      "iscrowd": 0 or 1,
+  }
+  ```
+
+  - images数组元素的数量等同于划入训练集（或者测试集）的图片的数量；
+
+  - annotations数组元素的数量等同于训练集（或者测试集）中bounding box的数量；
+
+  - categories数组元素的数量为80（2017年）；
+
+- Object Keypoint.json
+
+  ```bash
+  {
+      "info": info,
+      "licenses": [license],
+      "images": [image],
+      "annotations": [annotation],
+      "categories": [category]
+  }
+  
+  # keypoints是一个三维数组：[x,y,v]，v={0:没标注, 1:不可见, 2:可见}
+  annotation{
+      "keypoints": [x1,y1,v1,...],
+      "num_keypoints": int,
+      "id": int,
+      "image_id": int,
+      "category_id": int,
+      "segmentation": RLE or [polygon],
+      "area": float,
+      "bbox": [x,y,width,height],
+      "iscrowd": 0 or 1,
+  }
+  
+  # categories id只有1个person
+  # keypoints：关键点名称，skeleton是骨骼图定义
+  categories{
+      "id": int,
+      "name": str,
+      "supercategory": str,
+      "keypoints": [str],
+      "skeleton": [edge]
+  }
+  ```
+
+  - images数组元素数量是划入训练集（测试集）的图片的数量；
+  - annotations是bounding box的数量，在这里只有人这个类别的bounding box；
+  - categories数组元素的数量为1，只有一个：person（2017年）；
+
+- Image Caption.json
+
+  ```bash
+  {
+      "info": info,
+      "licenses": [license],
+      "images": [image],
+      "annotations": [annotation]
+  }
+  
+  # annotation，一张图片可能有多个annotation
+  annotation{
+      "id": int,
+      "image_id": int,
+      "caption": str
+  }
+  ```
+
+  - images数组的元素数量等于划入训练集（或者测试集）的图片的数量；
+  - annotations的数量要多于图片的数量，这是因为一个图片可以有多个场景描述；
