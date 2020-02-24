@@ -142,13 +142,13 @@ test_init = iterator.make_initializer(test_data) # initializer for train_data
 
 # 5. API details
 
-1. Name Scope  VS Variable Scope
+- Name Scope  VS Variable Scope
+  - with tf.name_scope('two_layers') as scope:
+    一方面是为了简化计算图，另一方面使得不同name scope中可以使用相同名字**（这里的名字Python Varaiable的命名）**。
+    E.g. **GANs**中我们就可以在两个网络下使用相同的参数名字。
+  - with tf.variable_scope('two_layers') as scope:
+    Variable Scope的使用促进了参数的share。看下面的例子即可。注意reuse有两个前提：
 
-- with tf.name_scope('two_layers') as scope:
-  一方面是为了简化计算图，另一方面使得不同name scope中可以使用相同名字**（这里的名字Python Varaiable的命名）**。
-  E.g. **GANs**中我们就可以在两个网络下使用相同的参数名字。
-- with tf.variable_scope('two_layers') as scope:
-  Variable Scope的使用促进了参数的share。看下面的例子即可。注意reuse有两个前提：
   1. 重复使用的参数具有相同的名字，这里的名字指的是**计算图中的name**
   2. scope.reuse_variables()
 
@@ -159,7 +159,30 @@ with tf.variable_scope('two_layers') as scope:
     logits2 = two_hidden_layers(x2)
 ```
 
-2. Tensorflow Padding
+- Tensorflow Padding
+  - Valid = no padding：使用valid的时候实际上就是没有padding，卷积核从头开始slide，如果最后一侧滑动没有到最后一个元素，但是已经不够了，就舍弃剩下的。
+  - SAME = padding：same情况下如果stride=1的时候输入输出的长宽相同。但是值得注意的是tensorflow的padding和Caffe不同，tensorflow优先选择在activation map的右边填充0，而caffe优先在左边padding
 
-- Valid = no padding：使用valid的时候实际上就是没有padding，卷积核从头开始slide，如果最后一侧滑动没有到最后一个元素，但是已经不够了，就舍弃剩下的。
-- SAME = padding：same情况下如果stride=1的时候输入输出的长宽相同。但是值得注意的是tensorflow的padding和Caffe不同，tensorflow优先选择在activation map的右边填充0，而caffe优先在左边padding
+- tf查看ckpt文件内部信息
+
+```python
+from tensorflow.python import pywrap_tensorflow
+checkpoint_path = 'model.ckpt'
+reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path) #tf.train.NewCheckpointReader
+var_to_shape_map = reader.get_variable_to_shape_map()
+for key in var_to_shape_map:
+    print("tensor_name: ", key)
+    #print(reader.get_tensor(key))
+```
+
+- tf.train.saver(max_to_keep=5)
+
+  可以控制只保存5个模型即使你的epoch数量很大，如果要保存比如精度最高的几个模型就要自己手写判断
+
+- tf不再直接占领整张卡
+
+```python
+gpu_options = tf.GPUOptions(allow_growth=True)
+sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+```
+
