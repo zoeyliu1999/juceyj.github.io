@@ -17,6 +17,7 @@ import tensorflow.contrib.eager as tfe
 
 # 0. Pipeline
 
+- 根据需要定义session
 - 定义计算图
 - 每个variable都会定义自己的initializer，可能是随机初始化，也有可能是常量初始化
 - 在run computational graph之前要先run initializer，可以是global的，也可以是指定var_list（根据var_name来判断）
@@ -184,5 +185,17 @@ for key in var_to_shape_map:
 ```python
 gpu_options = tf.GPUOptions(allow_growth=True)
 sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+```
+
+- 读取tensorboadrd event
+
+```python
+from tensorboard.backend.event_processing import event_accumulator
+ea = event_accumulator.EventAccumulator(event_file)
+ea.Reload()
+print(ea.scalars.Keys())
+curve = ea.scalars.Items('Train_AverageReturn')
+step = [each.step for each in curve]
+value = [each.value for each in curve]
 ```
 
