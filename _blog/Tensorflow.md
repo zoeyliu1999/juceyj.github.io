@@ -8,12 +8,14 @@ permalink: /blog/tensorflow/
 
 # Tensorflow
 
-[Tensorflow](https://www.tensorflow.org/tutorials/) 已经毋庸置疑地成为了目前最火热的深度学习framework，相信其中也有不少Google的因素在里面。通过*CS231n*的Assignment我也正式入坑了TF，这篇博文就将专门用来记录我在使用tensorflow的过程当中遇到了一个Bug和比较厉害的API，因此这篇文章也将长期更新！
+[Tensorflow](https://www.tensorflow.org/tutorials/) 已经毋庸置疑地成为了目前最火热的深度学习framework，相信其中也有不少Google的因素在里面。通过*CS231n*的Assignment我也正式入坑了TF，这篇博文就将专门用来记录我在使用tensorflow的过程当中遇到了一个Bug和比较厉害的API。
 
 ```python
 import tensorflow as tf
 import tensorflow.contrib.eager as tfe
 ```
+
+
 
 # 0. Pipeline
 
@@ -22,6 +24,8 @@ import tensorflow.contrib.eager as tfe
 - 每个variable都会定义自己的initializer，可能是随机初始化，也有可能是常量初始化
 - 在run computational graph之前要先run initializer，可以是global的，也可以是指定var_list（根据var_name来判断）
 - 然后再运行计算图
+
+
 
 # 1. Tensorboard
 
@@ -68,7 +72,9 @@ tensorboard --logdir="./graphs"
    另外就是在这里的`global_step`这个参数很重要，是全局索引，在optimizer中也会用到。
 
 
+
 # 2. tf.train.Saver()
+
 参数存储。需要和checkpoint文件一起存储作为参数的map。当然你也可以指定需要存储的特定参数。
 
 ```python
@@ -79,20 +85,6 @@ saver.save(sess, store path, global_step)
 # 先restore checkpoint，里面有变量名的索引，然后再restore值文件
 ckpt = tf.train.get_checkpoint_state(os.path.dirname('path')) 
 saver.restore(sess, path)
-```
-
-
-
-# tf.cond(pred, fn1, fn2, name=None)
-
-没有eager mode的情况下不能使用python if / for/ while，因为这时候tensor里面没有实际的值，这时候需要使用特定的分支API，其中fn1和fn2是函数，看下面的例子：
-
-```python
-def huber_loss(labels, predictions, delta=14.0): 
- 	residual = tf.abs(labels - predictions) 
-  	def f1(): return 0.5 * tf.square(residual) 
-  	def f2(): return delta * residual - 0.5 * tf.square(delta) 
-  	return tf.cond(residual < delta, f1, f2)
 ```
 
 
@@ -131,7 +123,7 @@ test_init = iterator.make_initializer(test_data) # initializer for train_data
 
 
 
-# 4. Eager Model
+# 4. Eager Mode
 
 真的是，在我无比适应计算图之后告诉我eager model才是未来的趋势真的是令人心碎，Eager model使得tensor像numpy array一样易操作，支持各种分支和索引。但是缺点就是一旦开启无法关闭，这个还是很不走心的，尤其是在Eager model和底层TF API兼容性那么差的情况下。不过在这里很高兴的是：**Keras支持Eager model！**
 - `tfe.Variable`
@@ -154,6 +146,7 @@ test_init = iterator.make_initializer(test_data) # initializer for train_data
   2. scope.reuse_variables()
 
 ```python
+# tf.AUTO_REUSE
 with tf.variable_scope('two_layers') as scope:
     logits1 = two_hidden_layers(x1)
     scope.reuse_variables()
@@ -199,3 +192,108 @@ step = [each.step for each in curve]
 value = [each.value for each in curve]
 ```
 
+- tf.cond(pred, fn1, fn2, name=None)
+
+没有eager mode的情况下不能使用python if / for/ while，因为这时候tensor里面没有实际的值，这时候需要使用特定的分支API，其中fn1和fn2是函数，看下面的例子：
+
+```python
+# bounded alternative of mean square error
+def huber_loss(labels, predictions, delta=14.0): 
+ 	residual = tf.abs(labels - predictions) 
+  	def f1(): return 0.5 * tf.square(residual) 
+  	def f2(): return delta * residual - 0.5 * tf.square(delta) 
+  	return tf.cond(residual < delta, f1, f2)
+```
+
+- tf.GPUOptions
+
+  ```python
+  gpu_options = tf.GPUOptions(
+              per_process_gpu_memory_fraction=gpu_frac,
+              allow_growth=allow_gpu_growth)
+  ```
+
+  - per_process_gpu_memory_fraction: limit the percentage a process can use in one GPU
+  - allow_growth: True if you want to allocate GPU memory dynamically
+
+- tf.ConfigProto
+
+  ```python
+  # use GPU
+  config = tf.ConfigProto(
+              gpu_options=gpu_options,
+              log_device_placement=False,
+              allow_soft_placement=True,
+              inter_op_parallelism_threads=1,
+              intra_op_parallelism_threads=1)
+  # do not use GPU
+  config = tf.ConfigProto(device_count={'GPU': 0})
+  ```
+
+  - log_device_placement: 是否打印设备分配日志
+  - allow_soft_placement: 如果你指定的设备不存在，允许TF自动分配设备
+  - device_count: dict of device counts
+
+- Moving Average
+
+  ```python
+  # official example
+  
+  # Create variables.
+  var0 = tf.Variable(...)
+  var1 = tf.Variable(...)
+  
+  # ... use the variables to build a training model...
+  ...
+  # Create an op that applies the optimizer.  This is what we usually
+  
+  # would use as a training op.
+  opt_op = opt.minimize(my_loss, [var0, var1])
+   
+  # Create an ExponentialMovingAverage object
+  ema = tf.train.ExponentialMovingAverage(decay=0.9999)
+   
+  # Create the shadow variables, and add ops to maintain moving averages
+  # returen list of ops
+  maintain_averages_op = ema.apply([var0, var1])
+   
+  # Create an op that will update the moving averages after each training
+  # step.  This is what we will use in place of the usual training op.
+  with tf.control_dependencies([opt_op]):
+      training_op = tf.group(maintain_averages_op)
+   
+  ...train the model by running training_op...
+  _ = sess.run(training_op, feed_dict = feed_dict)
+   
+  # Example of restoring the shadow variable values:
+  # Create a Saver that loads variables from their saved shadow values.
+  shadow_var0_name = ema.average_name(var0)
+  shadow_var1_name = ema.average_name(var1)
+  saver = tf.train.Saver({shadow_var0_name: var0, shadow_var1_name: var1})
+  saver.restore(...checkpoint filename...)
+  
+  # easy implementation
+  # create after model defination
+  variable_averages = tf.train.ExponentialMovingAverage(0.999, global_step)
+  variables_averages_op = variable_averages.apply(tf.trainable_variables())
+  # corresponding shadow variable
+  ave_vars = [variable_averages.average(var) for var in tf.trainable_variables()]
+  train_op = tf.group(train_op, variables_averages_op)
+  
+  save_vars = tf.trainable_variables() + ave_vars
+  saver = tf.train.Saver(var_list=save_vars, max_to_keep=5)
+  
+  # define your saver and then restore
+  variable_averages = tf.train.ExponentialMovingAverage(0.999)
+  variables_to_restore = variable_averages.variables_to_restore()
+  saver = tf.train.Saver(variables_to_restore)
+  saver.restore(sess, model_path)
+  ```
+
+  - tf.control_dependencies()
+
+    强行加入依赖，即上文中要想获得training_op，必须计算opt_op
+
+  - 详情可见例子，主要就是在定义玩模型之后加入averager，然后将moving average的op和train_op合并
+
+  - 注意这个用于的是一个变量的moving average，average本身不会介入训练过程，和DQN中online network moving update target network是不同的
