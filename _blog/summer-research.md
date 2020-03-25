@@ -3,7 +3,7 @@ layout: archive
 title: 'Indiana Vision Lab的一些官方暑研经验分享'
 author_profile: true
 date: 2020-03-25 16:48:21
-permalink: /blog/summer-research/
+permalink: /blog/summer/
 ---
 
 Link to my original copy in Fudan Hotpot: [[link]](<https://fdu-hotpot.top/?p=1328>) 
