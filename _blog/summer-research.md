@@ -14,7 +14,7 @@ Link to my original copy in Fudan Hotpot: [[link]](<https://fdu-hotpot.top/?p=13
 
 
 
-## 项目介绍
+# 项目介绍
 
 首先介绍一下暑研项目的基本情况。我申请的暑研项目是Indiana University Bloomington信息学院（SICE）的官方暑研项目[Global Talent Attraction Program](<https://luddy.indiana.edu/research/student-research/fellowship.html>) (GTAP)。这个项目IUB的信息学院以本科生为目标而设置，一方面是为了培养学术科研能力，另一方面主要也是为了招生需求，让大家有机会提前了解IUB。下面我简单归纳了这个项目的一些主要特点：
 
@@ -29,13 +29,13 @@ Link to my original copy in Fudan Hotpot: [[link]](<https://fdu-hotpot.top/?p=13
 
 
 
-## 实验室介绍
+# 实验室介绍
 
 我最终在IUB的computer vision lab [[homepage]](<http://vision.soic.indiana.edu/>) 完成暑研，导师是[Prof. David Crandall](<https://homes.luddy.indiana.edu/djcran/>)（[see David in ICCV19](<https://www.youtube.com/watch?v=xzygVl7ZncQ&t=4996s>)）。David人很年轻，但是research经验很丰富，3月份刚刚获得了**Google Faculty Research Award**，在vision的多个领域都有涉及（e.g. segmentation、3D reconstruction、video understanding），尤其是在Egocentric Vision问题（简单来说就是多视角的视觉理解）上属于小牛水平。而且平时人很nice，不会对你的research topic和pace有太多的要求，可以充分和其他的PhD和visiting students合作；David的学生很多，非常注重diversity，有最早的毕业生现在上海科技大学任助理教授；私下还有组织大家参加骑行活动；还有很重要的一点是，David是IUB信息学院研究生院的director，主管招生方面的事宜，表现好的话可能对申请有比较大的积极影响（不要问我怎么知道的 :)）。
 
 
 
-## 签证
+# 签证
 
 最后想给大家简单介绍一下美国的签证类型，这也是考虑申请官方项目而不是海投的一个重要原因，毕竟海外暑研近几年的签证申请形式也是越来越严峻了（个人经验，有错希望大家及时指出:joy:）：
 
@@ -47,7 +47,7 @@ Link to my original copy in Fudan Hotpot: [[link]](<https://fdu-hotpot.top/?p=13
 
 
 
-## 总结
+# 总结
 
 在我看来，一个好的暑研确实可以为申请季的成功奠定基础，但无论是暑研还是实习的根本目的其实都是获得推荐信。暑研时间较短，要及时出成果本就不是容易的事情，重要的是能给你的supervisor展现自己的能力和积极性。感谢建立hotpot的学长学姐们，希望大家可以多参考这里分享的经验以避免走弯路。最后希望大家都能获得自己心仪的结果！
 
