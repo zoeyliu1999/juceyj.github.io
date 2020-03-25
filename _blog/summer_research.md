@@ -2,7 +2,7 @@
 layout: archive
 title: 'Indiana Vision Lab的一些官方暑研经验分享'
 author_profile: true
-date: 2020-03-25 16:48:21
+date: 2019-03-25 16:48:21
 permalink: /blog/summer_research/
 ---
 
