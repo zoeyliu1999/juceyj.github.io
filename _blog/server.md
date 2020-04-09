@@ -6,6 +6,8 @@ author_profile: true
 permalink: /blog/server/
 ---
 
+# Server Tips
+
 - 服务器使用jupyter notebook
 
   ```bash
@@ -240,3 +242,99 @@ permalink: /blog/server/
 
   - images数组的元素数量等于划入训练集（或者测试集）的图片的数量；
   - annotations的数量要多于图片的数量，这是因为一个图片可以有多个场景描述；
+
+
+
+# Ubuntu Tips
+
+- sudo apt-get
+
+  ```
+  用法：apt-get [选项] 命令  
+   apt-get [选项] install|remove pkg1 [pkg2 ...]  
+   apt-get [选项] source pkg1 [pkg2 ...]  
+    
+  apt-get 是一个下载安装软件包的简单命令行接口。  
+  最常用的命令是update(更新)  
+  和install(安装)。  
+    
+  命令：  
+   update - 重新获取软件包列表  
+   upgrade - 进行更新  
+   install - 安装新的软件包  
+   remove - 移除软件包  
+   autoremove - 自动移除全部不使用的软件包  
+   purge - 移除软件包和配置文件  
+   source - 下载源码档案  
+   build-dep - 为源码包配置编译依赖  
+   dist-upgrade - 发行版升级, 参见 apt-get(8)  
+   dselect-upgrade - 依照 dselect 的选择更新  
+   clean - 清除下载的归档文件  
+   autoclean - 清除旧的的已下载的归档文件  
+   check - 检验是否有损坏的依赖  
+    
+  选项：  
+   -h 本帮助文件。  
+   -q 输出到日志 - 无进展指示  
+   -qq 不输出信息，错误除外  
+   -d 仅下载 - 不安装或解压归档文件  
+   -s 不实际安装。模拟执行命令  
+   -y 假定对所有的询问选是，不提示  
+   -f 尝试修正系统依赖损坏处  
+   -m 如果归档无法定位，尝试继续  
+   -u 同时显示更新软件包的列表  
+   -b 获取源码包后编译  
+   -V 显示详细的版本号  
+   -c=? 阅读此配置文件  
+   -o=? 设置自定的配置选项，如 -o dir::cache=/tmp  
+  ```
+
+  - 出错了用sudo apt-get -f可以自动修复
+
+- 安装deb包：
+
+  ```
+  sudo dpkg -i wps-office*.deb
+  ```
+
+  ```
+  sudo apt-get install gdebi
+  sudo gdebi <package.deb>
+  ```
+
+- grep关键词查找
+
+  ```bash
+  squeue | grep -i pixel
+  (-i 是不区分大小写的查找)
+  ```
+
+- CUDA：
+
+  ```bash
+  conda install cudatoolkit=8.0
+  conda install cudnn=7.0.5
+  ```
+
+- 前后台转换：
+
+  ```bash
+  ctrl z
+  jobs # 查看作业号
+  fg 1
+  bg 1
+  ```
+
+
+
+# VS code
+
+- 关闭git功能：setting中加入以下内容
+
+  ```
+  {
+  	"git.enabled": false,
+  	"git.path": null,
+  	"git.autofetch": false
+  }
+  ```

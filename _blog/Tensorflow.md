@@ -297,3 +297,36 @@ def huber_loss(labels, predictions, delta=14.0):
   - 详情可见例子，主要就是在定义玩模型之后加入averager，然后将moving average的op和train_op合并
 
   - 注意这个用于的是一个变量的moving average，average本身不会介入训练过程，和DQN中online network moving update target network是不同的
+
+
+
+- tf查看ckpt文件内部信息
+
+  ```python
+  from tensorflow.python import pywrap_tensorflow
+  checkpoint_path = 'model.ckpt'
+  reader = pywrap_tensorflow.NewCheckpointReader(checkpoint_path) #tf.train.NewCheckpointReader
+  var_to_shape_map = reader.get_variable_to_shape_map()
+  for key in var_to_shape_map:
+      print("tensor_name: ", key)
+      #print(reader.get_tensor(key))
+  ```
+
+- tensorboard
+
+  ```bash
+  tensorboard -logdir=log
+  ```
+
+- tf.train.saver(max_to_keep=5)
+
+  可以控制只保存5个模型即使你的epoch数量很大，如果要保存比如精度最高的几个模型就要自己手写判断
+
+- tf不再直接占领整张卡
+
+  ```python
+  gpu_options = tf.GPUOptions(allow_growth=True)
+  sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+  ```
+
+  
