@@ -46,7 +46,7 @@ My research interests include Computer Vision, Natural Language Processing and A
 # Personal Post
 
 - Outstanding Graduates | Kai Chen: Do More and Think Less [[link]](https://mp.weixin.qq.com/s?__biz=MzA3OTI1MTEwMA==&mid=2650759947&idx=1&sn=b7d10894112fa6ed9852493388a6ebd5&chksm=87bd90f8b0ca19eeec8d8912dfc9d4ad6c226c1249b2b1e823d6695834788c23d978261ed657&mpshare=1&scene=24&srcid=0531IJ3kc4oxdiBIiSFBXPLN&sharer_sharetime=1591584575276&sharer_shareid=c47b85daf6bf0d13114eb8b891f7f7ce&key=0b622c5b94cbe1faf22612d7eb4e839aef4b78ae53d44e804e14bf8b7348025bba127d870788bc7468145e0d74cfd17084697af9d56c38802f3c576a074cdf3b6c7b4df1cb683706c50eb748c0efb769&ascene=14&uin=MTkxMTI3NDE2MA%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=zh_CN&exportkey=AeU2zH7zxdVYk%2B27xsopWyg%3D&pass_ticket=BHNPuN38G7IorL%2BzrzL7sS1maBklEESAn0%2Bbo7KukczHK1FeSx9nruLvUyjl%2FMA6)
-  <br />Post after being selected as the outstanding graduates of Shanghai. Here you can see more details of my undergrad life!
+  <br />Wechat Push posted after being selected as the outstanding graduates of Shanghai. Here you can see more details of my undergrad life!
 
 
 
