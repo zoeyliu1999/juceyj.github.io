@@ -11,4 +11,4 @@ redirect_from:
 
 You can download my CV [from this link](https://kaichen1998.github.io/files/CV_of_Kai_Chen.pdf).
 
-<a href="https://kaichen1998.github.io/files/CV_of_Kai_Chen.pdf" target="_blank">PDF<a>
+<embed src="https://kaichen1998.github.io/files/CV_of_Kai_Chen.pdf.pdf" width="800" height="600" ></embed>
