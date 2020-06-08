@@ -6,8 +6,6 @@ author_profile: true
 permalink: /blog/tensorflow/
 ---
 
-## Tensorflow
-
 [Tensorflow](https://www.tensorflow.org/tutorials/) 已经毋庸置疑地成为了目前最火热的深度学习framework，相信其中也有不少Google的因素在里面。通过*CS231n*的Assignment我也正式入坑了TF，这篇博文就将专门用来记录我在使用tensorflow的过程当中遇到了一个Bug和比较厉害的API。
 
 ```python

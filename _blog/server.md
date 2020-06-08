@@ -6,8 +6,6 @@ author_profile: true
 permalink: /blog/server/
 ---
 
-## Server Tips
-
 - 服务器使用jupyter notebook
 
   ```bash
