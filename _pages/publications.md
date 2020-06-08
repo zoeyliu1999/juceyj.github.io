@@ -9,7 +9,6 @@ author_profile: true
 
 - Md Alimoor Reza, Akshay Naik, **Kai Chen**, David Crandall, "Automatic Annotation for Semantic Segmentation in Indoor Scenes," *IEEE International Conference on Intelligent Robots and Systems (IROS), 2019* [[pdf]](<http://homes.sice.indiana.edu/mdreza/files/auto_annot_iros19.pdf>)
 
-```css
 .photo{
     float:left;
     width:20%;
@@ -18,9 +17,7 @@ author_profile: true
     float:right;
     width:80%;
 }
-```
 
-```html
 <div class="golf">
 	<div class="photo"><img src="../images/profile.png"></div>
 	<div class="intro">
@@ -29,7 +26,3 @@ author_profile: true
                         </p>
 	</div>
 </div>
-```
-
-
-
