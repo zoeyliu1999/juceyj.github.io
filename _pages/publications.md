@@ -7,22 +7,41 @@ author_profile: true
 
 # Publications
 
-- Md Alimoor Reza, Akshay Naik, **Kai Chen**, David Crandall, "Automatic Annotation for Semantic Segmentation in Indoor Scenes," *IEEE International Conference on Intelligent Robots and Systems (IROS), 2019* [[pdf]](<http://homes.sice.indiana.edu/mdreza/files/auto_annot_iros19.pdf>)
-
-.photo{
-    float:left;
-    width:20%;
-}
-.intro{
-    float:right;
-    width:80%;
-}
-
-<div class="golf">
-	<div class="photo"><img src="../images/profile.png"></div>
-	<div class="intro">
-	    <h3>高尔夫</h3>
-	    <p>高尔夫球运动是一项健康、绿色、快乐、回归自然的体育运动，打高尔夫球能让人体验挑战与激情，实现人与自然的和谐。人与人礼貌谦让的良好运动精神，是高尔夫球运动的精髓所在。山东的高尔夫球场近30家，全部是按国际标准建造的，场内服务功能及设施完备，是比赛、会议、旅游休闲、商务于一体的度假场所，来山东打高尔夫球定会让您亲身体验到高尔夫应享的尊贵服务。
-                        </p>
+<div class="MetaIRNet++">
+	<div style="float:right;width:30%"><img src="../images/pub/MetaIRNet++.jpg"></div>
+    <div class="float:left;width:70%">
+    <b>MetaIRNet++: Augmented One-Shot Fine-grained Image Recognition Algorithm Based On Differentiable Data Augmentation.</b></br>
+    <b>Kai Chen</b>, Yanwei Fu.</br>
+    Undergrad Graduate Thesis, 2020.
 	</div>
 </div>
+
+
+
+<div class="Access2020">
+	<div style="float:right;width:30%"><img src="../images/pub/Access2020.png"></div>
+    <div class="float:left;width:70%">
+    <b>Automatic Dense
+Annotation for Monocular 3D Scene Understanding.</b></br>
+    Md. Alimoor Reza, <b>Kai Chen</b>, Akshay Naik, David Crandall, and Soon-Heung Jung.</br>
+    IEEE Access Journal (IEEE Access), 2020.</br>
+	<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9052727">[link]</a>
+	<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:ukzL0yWhjRIJ:scholar.google.com/&output=citation&scisdr=CgUhbv_pEKzwljLr1S0:AAGBfm0AAAAAXt3uzS0PTdBmK1m_YvQRIx6zV51QM5li&scisig=AAGBfm0AAAAAXt3uzQTzCRuw7nZrzr2JuGLpz2MmoTKh&scisf=4&ct=citation&cd=-1&hl=en">[bibtex]</a>
+	</div>
+</div>
+
+
+
+<div class="IROS2019">
+	<div style="float:right;width:30%"><img src="../images/pub/IROS2019.png"></div>
+    <div class="float:left;width:70%">
+    <b>Automatic Annotation for Semantic Segmentation in Indoor Scenes.</b></br>
+    Md Alimoor Reza, Akshay Naik, <b>Kai Chen</b>, David Crandall.</br>
+    IEEE International Conference on Intelligent Robots and Systems (IROS), 2019.</br>
+	<a href="https://www.semanticscholar.org/paper/Automatic-Annotation-for-Semantic-Segmentation-in-Reza-Naik/ec77d168c9fdb438ba18b1316f0fdd1486dd1415">[link]</a>
+	<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:IjIoNEXuROIJ:scholar.google.com/&output=citation&scisdr=CgUhbv_pEKzwljLqnFI:AAGBfm0AAAAAXt3vhFJs8xx91GwGfAU8qg3xiRNRjWcp&scisig=AAGBfm0AAAAAXt3vhBA_ET1UObBT7bIubLr0uCfm9bX5&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1">[bibtex]</a>
+	</div>
+</div>
+
+
+
