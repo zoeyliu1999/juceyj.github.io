@@ -8,7 +8,7 @@ author_profile: true
 # Publications
 
 <div class="MetaIRNet++">
-	<div style="float:right;width:30%"><img src="../images/pub/MetaIRNet++.jpg"></div>
+	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/MetaIRNet++.jpg"></div>
     <div class="float:left;width:70%">
     <b>MetaIRNet++: Augmented One-Shot Fine-grained Image Recognition Algorithm Based On Differentiable Data Augmentation.</b></br>
     <b>Kai Chen</b>, Yanwei Fu.</br>
@@ -19,7 +19,7 @@ author_profile: true
 
 
 <div class="Access2020">
-	<div style="float:right;width:30%"><img src="../images/pub/Access2020.png"></div>
+	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/Access2020.png"></div>
     <div class="float:left;width:70%">
     <b>Automatic Dense
 Annotation for Monocular 3D Scene Understanding.</b></br>
@@ -33,7 +33,7 @@ Annotation for Monocular 3D Scene Understanding.</b></br>
 
 
 <div class="IROS2019">
-	<div style="float:right;width:30%"><img src="../images/pub/IROS2019.png"></div>
+	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/IROS2019.png"></div>
     <div class="float:left;width:70%">
     <b>Automatic Annotation for Semantic Segmentation in Indoor Scenes.</b></br>
     Md Alimoor Reza, Akshay Naik, <b>Kai Chen</b>, David Crandall.</br>
