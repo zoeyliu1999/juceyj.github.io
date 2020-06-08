@@ -34,7 +34,7 @@ My research interests include Computer Vision, Natural Language Processing and A
 
 # Internship
 
-- Research Intern, [SenseTime](https://www.sensetime.com/), Shanghai, Oct. 2019 - Present
+- Research Intern, [SenseTime](https://www.sensetime.com/), Shanghai, Oct. 2019 - Apr. 2020
   <br />Advisor: [Dr. Wenxiu Sun](https://www.linkedin.com/in/wenxiu-sun-bb6b292b/?locale=de_DE)
 
 - June 2019 - Sep 2019, Visiting Scholar
