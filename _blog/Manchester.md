@@ -1,6 +1,6 @@
 ---
 title: 'Manchester交流小结'
-date: 2019-02-02 21:43:55
+date: 2020-02-02 21:43:55
 layout: archive
 author_profile: true
 permalink: /blog/Manchester/
