@@ -12,8 +12,10 @@ author_profile: true
     <div class="float:left;width:70%">
     <b>MetaIRNet++: Augmented One-Shot Fine-grained Image Recognition Algorithm Based On Differentiable Data Augmentation.</b><br /> <b>Kai Chen</b>, Yanwei Fu.
     <br /> Undergrad Graduate Thesis, 2020.
+    <br /> <a href="https://kaichen1998.github.io/files/MetaIRNet++/Slide.pdf">[slide]</a>
 	</div>
 </div>
+
 <br /> 
 
 <div class="Access2020">
@@ -23,10 +25,11 @@ author_profile: true
 Annotation for Monocular 3D Scene Understanding.</b>
 	<br /> Md. Alimoor Reza, <b>Kai Chen</b>, Akshay Naik, David Crandall, and Soon-Heung Jung.
     <br /> IEEE Access Journal (IEEE Access), 2020.
-	<br /> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9052727">[link]</a>
+	<br /> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9052727">[pdf]</a>
 	<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:ukzL0yWhjRIJ:scholar.google.com/&output=citation&scisdr=CgUhbv_pEKzwljLr1S0:AAGBfm0AAAAAXt3uzS0PTdBmK1m_YvQRIx6zV51QM5li&scisig=AAGBfm0AAAAAXt3uzQTzCRuw7nZrzr2JuGLpz2MmoTKh&scisf=4&ct=citation&cd=-1&hl=en">[bibtex]</a>
 	</div>
 </div>
+
 <br /> 
 
 <div class="IROS2019">
@@ -35,10 +38,12 @@ Annotation for Monocular 3D Scene Understanding.</b>
     <b>Automatic Annotation for Semantic Segmentation in Indoor Scenes.</b>
     <br /> Md Alimoor Reza, Akshay Naik, <b>Kai Chen</b>, David Crandall.
     <br /> IEEE International Conference on Intelligent Robots and Systems (IROS), 2019.
-	<br /> <a href="https://www.semanticscholar.org/paper/Automatic-Annotation-for-Semantic-Segmentation-in-Reza-Naik/ec77d168c9fdb438ba18b1316f0fdd1486dd1415">[link]</a>
+	<br /> <a href="https://www.semanticscholar.org/paper/Automatic-Annotation-for-Semantic-Segmentation-in-Reza-Naik/ec77d168c9fdb438ba18b1316f0fdd1486dd1415">[pdf]</a>
 	<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:IjIoNEXuROIJ:scholar.google.com/&output=citation&scisdr=CgUhbv_pEKzwljLqnFI:AAGBfm0AAAAAXt3vhFJs8xx91GwGfAU8qg3xiRNRjWcp&scisig=AAGBfm0AAAAAXt3vhBA_ET1UObBT7bIubLr0uCfm9bX5&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1">[bibtex]</a>
+    <a href="https://kaichen1998.github.io/files/Auto_anno/poster_kaichen.pdf">[poster]</a>
 	</div>
 </div>
+
 
 
 
