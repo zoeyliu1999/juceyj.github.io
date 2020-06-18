@@ -20,9 +20,9 @@ My research interests include Computer Vision, Natural Language Processing and A
 
 <div style="overflow-x:auto;overflow-y:auto;">
     <ul>
-        <li>[2020.06] Successfully undergrad thesis defend.</li>
-        <li>[2020.03] One paper accepted by IEEE Access.</li>
-        <li>[2019.06] One paper accepted by IROS 2019.</li>
+        <li>[2020.06] Successful undergrad thesis defend!</li>
+        <li>[2020.03] One paper accepted by IEEE Access!</li>
+        <li>[2019.06] One paper accepted by IROS 2019!</li>
  	</ul>
 </div>
 
