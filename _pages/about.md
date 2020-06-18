@@ -16,6 +16,18 @@ My research interests include Computer Vision, Natural Language Processing and A
 
 
 
+# News
+
+<div style="overflow-x:auto;overflow-y:auto;">
+    <ul>
+        <li>[2020.06] Successfully undergrad thesis defend.</li>
+        <li>[2020.03] One paper accepted by IEEE Access.</li>
+        <li>[2019.06] One paper accepted by IROS 2019.</li>
+ 	</ul>
+</div>
+
+
+
 # Education
 
 - Sep 2020 - June 2025 (Expected), Ph.D. in Computer Science
