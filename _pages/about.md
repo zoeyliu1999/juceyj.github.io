@@ -20,7 +20,7 @@ My research interests include Computer Vision, Natural Language Processing and A
 
 <div style="overflow-x:auto;overflow-y:auto;">
     <ul>
-        <li>[2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>. So sorry that I can't be there because of time problem.
+        <li>[2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>! So sorry that I can't be there because of time problem. </li>
         <li>[2020.06] Successful undergrad thesis defend!</li>
         <li>[2020.03] One paper accepted by IEEE Access!</li>
         <li>[2019.06] One paper accepted by IROS 2019!</li>
