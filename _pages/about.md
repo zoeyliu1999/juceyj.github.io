@@ -11,12 +11,17 @@ redirect_from:
 # Introduction
 I am a PhD student in Hong Kong University of Science and Technology (HKUST) Computer Science and Engineer Department (CSE), co-supervised by [Prof. Qifeng Chen](https://cqf.io/) and [Prof. Dit-Yan Yeung](https://sites.google.com/view/dyyeung/home?authuser=0). Before that, I was an undergraduate student majoring in Computer Science in Fudan University supervised by [Prof. Yanwei Fu](<https://yanweifu.github.io/>).
 
-My research interests include Computer Vision, Natural Language Processing and Artificial Intelligence, especially in few shot learning, multimodal learning and specific vision applications.
+My research interests include Computer Vision, Natural Language Processing and Artificial Intelligence, especially in few shot learning, unsupervised learning, multimodality learning and specific vision applications.
 
 
 
 # News
-<div style="overflow-x:auto;overflow-y:auto;">
+- [2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of [Shanghai Qizhi Institute](https://iiis.tsinghua.edu.cn/sqi/)! So sorry that I can't be there because of time problem.
+- [2020.06] Successful undergrad thesis defend!
+- [2020.03] One paper accepted by IEEE Access!
+- [2019.06] One paper accepted by IROS 2019!
+
+<!-- <div style="overflow-x:auto;overflow-y:auto;">
     <ul>
         <li>[2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>! So sorry that I can't be there because of time problem. </li>
         <li>[2020.06] Successful undergrad thesis defend!</li>
@@ -24,7 +29,7 @@ My research interests include Computer Vision, Natural Language Processing and A
         <li>[2019.06] One paper accepted by IROS 2019!</li>
  	</ul>
 </div>
-
+ -->
 
 
 # Education
@@ -38,11 +43,10 @@ My research interests include Computer Vision, Natural Language Processing and A
   <br /> [Department of Computer Science, University of Manchester](https://www.cs.manchester.ac.uk/), Manchester, UK
   <br /> Advisor: [Dr. Tingting Mu](https://personalpages.manchester.ac.uk/staff/tingting.mu/Site/About_Me.html)
 
-
+# Services
+- Reviewer: IEEE Access
 
 # Experience
-- Services
-  - Reviewer: IEEE Access
 - Research Intern, [SenseTime](https://www.sensetime.com/), Shanghai, Oct. 2019 - Apr. 2020
   <br />Advisor: [Dr. Wenxiu Sun](https://www.linkedin.com/in/wenxiu-sun-bb6b292b/?locale=de_DE)
 - June 2019 - Sep 2019, Visiting Scholar
