@@ -13,6 +13,8 @@ I am a PhD student in Hong Kong University of Science and Technology (HKUST) Com
 
 My research interests include Computer Vision, Natural Language Processing and Artificial Intelligence, especially in few shot learning, unsupervised learning, multimodality learning and specific vision applications.
 
+Office: C07 at CYT 3007
+
 
 
 # News
