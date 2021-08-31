@@ -7,6 +7,19 @@ author_profile: true
 
 # Publications
 
+<div class="MultiSiam">
+	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/MultiSiam.png"></div>
+    <div class="float:left;width:70%">
+    <b>MultiSiam: Self-supervised Multi-instance Siamese Representation Learning for Autonomous Driving.</b><br /> <b>Kai Chen</b>, Lanqing Hong, Hang Xu, Zhenguo Li, Dit-Yan Yeung.
+    <br /> IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
+    <br /> <a href="https://arxiv.org/abs/2108.12178">[pdf]</a>
+           <a href="https://arxiv.org/abs/2108.12178">[bibtex]</a>
+           <a href="https://github.com/KaiChen1998/MultiSiam">[code]</a>
+	</div>
+</div>
+
+<br /> 
+
 <div class="MetaIRNet++">
 	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/MetaIRNet++.jpg"></div>
     <div class="float:left;width:70%">
