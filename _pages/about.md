@@ -24,19 +24,19 @@ Office: C07 at CYT 3007
 - [2020.03] One paper accepted by IEEE Access!
 - [2019.06] One paper accepted by IROS 2019!
 
+
+
 <div style="height:200px;overflow-y:auto">
   <ul>
-        <li>[2021.08] Invited to serve as a reviewer for AAAI 2022!~
+        <li>[2021.08] Invited to serve as a reviewer for AAAI 2022!
         <li>[2021.07] One paper accepted by ICCV 2021!</li>
         <li>[2021.07] Welcome to check our ICCV 2021 workshop <a href="https://sslad2021.github.io/index.html">SSLAD</a> on Self-supervised Learning for Next-Generation Industry-level Autonomous Driving!</li>
         <li>[2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>! So sorry that I can't be there because of time problem. </li>
         <li>[2020.06] Successful undergrad thesis defend!</li>
         <li>[2020.03] One paper accepted by IEEE Access!</li>
-        <li>[2019.06] One paper accepted by IROS 2019!</li>
- 	</ul>
-</div>
+        <li>[2019.06] One paper accepted by IROS 2019!</li></ul></div>
 
-<!--  -->
+
 
 
 # Education
