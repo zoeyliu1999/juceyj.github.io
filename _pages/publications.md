@@ -17,8 +17,6 @@ author_profile: true
            <a href="https://github.com/KaiChen1998/MultiSiam">[code]</a>
 	</div>
 </div>
-
-
 <br /><br /> 
 
 <div class="MetaIRNet++">
