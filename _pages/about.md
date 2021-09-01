@@ -25,7 +25,7 @@ Office: C07 at CYT 3007
 - [2019.06] One paper accepted by IROS 2019!
 
 <div style="height:200px;overflow-y:auto;">
-    <ul>
+  <ul>
         <li>[2021.08] Invited to serve as a reviewer for AAAI 2022!
         <li>[2021.07] One paper accepted by ICCV 2021!</li>
         <li>[2021.07] Welcome to check our ICCV 2021 workshop <a href="https://sslad2021.github.io/index.html">SSLAD</a> on Self-supervised Learning for Next-Generation Industry-level Autonomous Driving!</li>
@@ -35,6 +35,7 @@ Office: C07 at CYT 3007
         <li>[2019.06] One paper accepted by IROS 2019!</li>
  	</ul>
 </div>
+<!--  -->
 
 
 # Education
