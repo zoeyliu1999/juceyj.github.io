@@ -13,10 +13,10 @@ author_profile: true
     <b>MultiSiam: Self-supervised Multi-instance Siamese Representation Learning for Autonomous Driving.</b><br /> <b>Kai Chen</b>, Lanqing Hong, Hang Xu, Zhenguo Li, Dit-Yan Yeung.
     <br /> IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
     <br /> <a href="https://arxiv.org/abs/2108.12178">[pdf]</a>
-           <a href="https://arxiv.org/abs/2108.12178">[bibtex]</a>
            <a href="https://github.com/KaiChen1998/MultiSiam">[code]</a>
 	</div>
 </div>
+
 <br /><br /> 
 
 <div class="SODA10M">
@@ -26,9 +26,9 @@ author_profile: true
     Jianhua Han, Xiwen Liang, Hang Xu, <b>Kai Chen</b>, Lanqing Hong, Jiageng Mao, Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu
     <br /> Arxiv preprint, 2021.
     <br /> <a href="https://arxiv.org/abs/2106.11118">[pdf]</a>
-           <a href="https://arxiv.org/abs/2106.11118">[bibtex]</a>
        </div>
 </div>
+
 
 <br />
 
@@ -50,9 +50,9 @@ Annotation for Monocular 3D Scene Understanding.</b>
 	<br /> Md. Alimoor Reza, <b>Kai Chen</b>, Akshay Naik, David Crandall, and Soon-Heung Jung.
     <br /> IEEE Access Journal (IEEE Access), 2020.
 	<br /> <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9052727">[pdf]</a>
-	<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:ukzL0yWhjRIJ:scholar.google.com/&output=citation&scisdr=CgWrtq8WEKzwlgQxuG0:AAGBfm0AAAAAXus0oG1e5grTSlvQK7Pz6RDVlIQZ2A-g&scisig=AAGBfm0AAAAAXus0oEUdECOTuf4S1a4JWF5aGQ8QIbNn&scisf=4&ct=citation&cd=-1&hl=en">[bibtex]</a>
 	</div>
 </div>
+
 
 
 <br /> 
@@ -64,10 +64,10 @@ Annotation for Monocular 3D Scene Understanding.</b>
     <br /> Md Alimoor Reza, Akshay Naik, <b>Kai Chen</b>, David Crandall.
     <br /> IEEE International Conference on Intelligent Robots and Systems (IROS), 2019.
 	<br /> <a href="https://www.semanticscholar.org/paper/Automatic-Annotation-for-Semantic-Segmentation-in-Reza-Naik/ec77d168c9fdb438ba18b1316f0fdd1486dd1415">[pdf]</a>
-	<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:IjIoNEXuROIJ:scholar.google.com/&output=citation&scisdr=CgUhbv_pEKzwlgQxE00:AAGBfm0AAAAAXus0C03aYsWckdb6zFFpf6avn8C7xjKz&scisig=AAGBfm0AAAAAXus0C1BNxjwvhTOf2pYujHUxDKzaKGv_&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1">[bibtex]</a>
     <a href="https://kaichen1998.github.io/files/Auto_anno/poster_kaichen.pdf">[poster]</a>
 	</div>
 </div>
+
 
 
 
