@@ -27,12 +27,6 @@ Office: C07 at CYT 3007
     <li> [2020.03] One paper accepted by IEEE Access! </li>
     <li> [2019.06] One paper accepted by IROS 2019! </li> <br /></div>
 
-- [2021.07] One paper accepted by ICCV 2021!
-- [2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of [Shanghai Qizhi Institute](https://iiis.tsinghua.edu.cn/sqi/)! So sorry that I can't be there because of time problem.
-- [2020.06] Successful undergrad thesis defend!
-- [2020.03] One paper accepted by IEEE Access!
-- [2019.06] One paper accepted by IROS 2019!
-
 
 
 # Education
