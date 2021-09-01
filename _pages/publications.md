@@ -23,12 +23,13 @@ author_profile: true
        <div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/SODA10M.png"></div>
     <div class="float:left;width:70%">
     <b>SODA10M: A Large-Scale 2D Self/Semi-SupervisedObject Detection Dataset for Autonomous Driving.</b><br /> 
-    Jianhua Han, Xiwen Liang, Hang Xu, <b>Kai Chen</b>, Lanqing Hong, Jiageng Mao,Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu
+    Jianhua Han, Xiwen Liang, Hang Xu, <b>Kai Chen</b>, Lanqing Hong, Jiageng Mao, Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu
     <br /> Arxiv preprint, 2021.
     <br /> <a href="https://arxiv.org/abs/2106.11118">[pdf]</a>
            <a href="https://arxiv.org/abs/2106.11118">[bibtex]</a>
        </div>
 </div>
+
 <br />
 
 <div class="MetaIRNet++">
