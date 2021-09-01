@@ -9,7 +9,7 @@ author_profile: true
 
 <div class="MultiSiam">
 	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/MultiSiam.png"></div>
-    <div class="float:left;width:50%">
+    <div class="float:left;width:70%">
     <b>MultiSiam: Self-supervised Multi-instance Siamese Representation Learning for Autonomous Driving.</b><br /> <b>Kai Chen</b>, Lanqing Hong, Hang Xu, Zhenguo Li, Dit-Yan Yeung.
     <br /> IEEE/CVF International Conference on Computer Vision (ICCV), 2021.
     <br /> <a href="https://arxiv.org/abs/2108.12178">[pdf]</a>
@@ -18,6 +18,18 @@ author_profile: true
 	</div>
 </div>
 <br /><br /> 
+
+<div class="SODA10M">
+       <div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/SODA10M.png"></div>
+    <div class="float:left;width:70%">
+    <b>SODA10M: A Large-Scale 2D Self/Semi-SupervisedObject Detection Dataset for Autonomous Driving.</b><br /> 
+    Jianhua Han, Xiwen Liang, Hang Xu, <b>Kai Chen</b>, Lanqing Hong, Jiageng Mao,Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu
+    <br /> Arxiv preprint, 2021.
+    <br /> <a href="https://arxiv.org/abs/2106.11118">[pdf]</a>
+           <a href="https://arxiv.org/abs/2106.11118">[bibtex]</a>
+       </div>
+</div>
+<br />
 
 <div class="MetaIRNet++">
 	<div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/MetaIRNet++.jpg"></div>
