@@ -26,8 +26,8 @@ Office: C07 at CYT 3007
     <li> [2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>! So sorry that I can't be there because of time problem. </li>
     <li> [2020.06] Successful undergrad thesis defend! </li>
     <li> [2020.03] One paper accepted by IEEE Access! </li>
-        <li> [2019.06] One paper accepted by IROS 2019! </li></ul></div>
-<br />
+    <li> [2019.06] One paper accepted by IROS 2019! </li></ul></div>
+
 
 # Education
 - Sep 2020 - June 2025 (Expected), Ph.D. in Computer Science
@@ -40,10 +40,17 @@ Office: C07 at CYT 3007
   <br /> [Department of Computer Science, University of Manchester](https://www.cs.manchester.ac.uk/), Manchester, UK
   <br /> Advisor: [Dr. Tingting Mu](https://personalpages.manchester.ac.uk/staff/tingting.mu/Site/About_Me.html)
 
+
+
 # Services
-- Reviewer: IEEE Access
+
+- Conference: Reviewer for AAAI 2022.
+- Journal: Reviewer for IEEE Access.
+
+
 
 # Experience
+
 - Research Intern, [SenseTime](https://www.sensetime.com/), Shanghai, Oct. 2019 - Apr. 2020
   <br />Advisor: [Dr. Wenxiu Sun](https://www.linkedin.com/in/wenxiu-sun-bb6b292b/?locale=de_DE)
 - June 2019 - Sep 2019, Visiting Scholar
