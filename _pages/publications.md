@@ -67,14 +67,3 @@ Annotation for Monocular 3D Scene Understanding.</b>
     <a href="https://kaichen1998.github.io/files/Auto_anno/poster_kaichen.pdf">[poster]</a>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
