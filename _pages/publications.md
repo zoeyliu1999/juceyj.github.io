@@ -26,8 +26,10 @@ author_profile: true
     Jianhua Han, Xiwen Liang, Hang Xu, <b>Kai Chen</b>, Lanqing Hong, Jiageng Mao, Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu
     <br /> Datasets and Benchmarks Track, Neural Information Processing Systems (NeurIPS), 2021.
     <br /> <a href="https://arxiv.org/abs/2106.11118">[pdf]</a>
-       </div>
+           <a href="https://soda-2d.github.io/">[website]</a>
+    	</div>
 </div>
+
 
 
 
