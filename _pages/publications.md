@@ -20,8 +20,9 @@ author_profile: true
             <br /> <i>IEEE/CVF International Conference on Computer Vision (ICCV), 2021.</i> 
             <br /> <span><a href="https://arxiv.org/abs/2108.12178">[pdf]</a></span>
             <span><a href="https://github.com/KaiChen1998/MultiSiam">[code]</a></span> 
-            <br /> <span><a href="https://zhuanlan.zhihu.com/p/406649716">[Zhihu (not official)]</a>
+            <span><a href="https://zhuanlan.zhihu.com/p/406649716">[Zhihu (not official)]</a>
     	</td></tr></table>
+
 
 
 <br />
