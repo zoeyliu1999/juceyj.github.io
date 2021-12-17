@@ -12,7 +12,7 @@ author_profile: true
     <col style="width:30%" /><col style="width:70%" />
     <tr style="border-collapse: separate; border-spacing:30em;">
         <td style="border-collapse: collapse; border: none;">
-            <img src="https://kaichen1998.github.io/images/pub/MultiSiam.png" width="800" />
+            <img src="https://kaichen1998.github.io/images/pub/MultiSiam.png" width="600" />
         </td>
         <td style="border-collapse: collapse; border: none;"> 
             <b>MultiSiam: Self-supervised Multi-instance Siamese Representation Learning for Autonomous Driving.</b> 
@@ -22,6 +22,7 @@ author_profile: true
             <span><a href="https://github.com/KaiChen1998/MultiSiam">[code]</a></span> 
             <br /> <span><a href="https://zhuanlan.zhihu.com/p/406649716">[Zhihu (not official)]</a>
     	</td></tr></table>
+
 
 <br />
 
