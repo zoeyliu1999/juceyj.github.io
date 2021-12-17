@@ -24,7 +24,7 @@ author_profile: true
 <div class="SODA10M">
     <div style="float:right;width:30%"><img src="https://kaichen1998.github.io/images/pub/SODA10M.png"></div>
     <div class="float:left;width:70%">
-    <b>SODA10M: A Large-Scale 2D Self/Semi-SupervisedObject Detection Dataset for Autonomous Driving.</b>
+    <b>SODA10M: A Large-Scale 2D Self/Semi-Supervised Object Detection Dataset for Autonomous Driving.</b>
     <br /> Jianhua Han, Xiwen Liang, Hang Xu, <b>Kai Chen</b>, Lanqing Hong, Jiageng Mao, Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu
     <br /> <i>Datasets and Benchmarks Track, Neural Information Processing Systems (NeurIPS), 2021.</i>
     <br /> <a href="https://arxiv.org/abs/2106.11118">[pdf]</a>
