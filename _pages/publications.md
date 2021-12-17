@@ -9,7 +9,7 @@ author_profile: true
 # Publications
 
 <table style="border: none; border-collapse: collapse;" border="0">
-    <col style="width:30%" /><col style="width:70%" />
+    <col style="width:40%" /><col style="width:60%" />
     <tr style="border-collapse: separate; border-spacing:30em;">
         <td style="border-collapse: collapse; border: none;">
             <img src="https://kaichen1998.github.io/images/pub/MultiSiam.png" width="600" />
@@ -20,7 +20,7 @@ author_profile: true
             <br /> <i>IEEE/CVF International Conference on Computer Vision (ICCV), 2021.</i> 
             <br /> <span><a href="https://arxiv.org/abs/2108.12178">[pdf]</a></span>
             <span><a href="https://github.com/KaiChen1998/MultiSiam">[code]</a></span> 
-            <span><a href="https://zhuanlan.zhihu.com/p/406649716">[Zhihu (not official)]</a>
+            <br /> <span><a href="https://zhuanlan.zhihu.com/p/406649716">[Zhihu (not official)]</a>
     	</td></tr></table>
 
 
