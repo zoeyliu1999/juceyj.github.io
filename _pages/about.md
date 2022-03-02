@@ -18,7 +18,7 @@ Office: C07 at CYT 3007
 # News
 <div style="height:250px;overflow-y:auto">
     <ul>
-    <li> [2021.11] Invited to serve as a reviewer for ECCV 2022! </li>
+    <li> [2022.03] Invited to serve as a reviewer for ECCV 2022! </li>
     <li> [2021.12] One paper accepted by AAAI 2022! </li>
     <li> [2021.11] Invited to serve as a reviewer for CVPR 2022, ICRA 2022 and AAAI 2022! </li>
     <li> [2021.10] One paper accepted by NeurIPS 2021! </li>
