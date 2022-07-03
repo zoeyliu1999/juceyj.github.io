@@ -18,6 +18,9 @@ Office: C07 at CYT 3007
 # News
 <div style="height:250px;overflow-y:auto">
     <ul>
+    <li> [2022.07] One paper accepted by ECCV 2022! </li>
+    <li> [2022.06] Invited to serve as a reviewer for TIP! </li>
+    <li> [2022.05] Invited to serve as a reviewer for NeurIPS 2022! </li>
     <li> [2022.03] Invited to serve as a reviewer for ECCV 2022! </li>
     <li> [2021.12] One paper accepted by AAAI 2022! </li>
     <li> [2021.11] Invited to serve as a reviewer for CVPR 2022, ICRA 2022 and AAAI 2022! </li>
@@ -54,8 +57,8 @@ Office: C07 at CYT 3007
 
 # Services
 
-- Conference: Reviewer for ECCV 2022, CVPR 2022, ICRA 2022, AAAI 2022 and NeurIPS 2021.
-- Journal: Reviewer for IEEE Access.
+- Conference: Reviewer for NeurIPS 2022/2021, ECCV 2022, CVPR 2022, ICRA 2022 and AAAI 2022.
+- Journal: Reviewer for TIP, IEEE Access.
 
 
 
