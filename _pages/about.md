@@ -18,6 +18,7 @@ Office: C07 at CYT 3007
 # News
 <div style="height:250px;overflow-y:auto">
     <ul>
+    <li> [2022.08] Welcome to check our ECCV 2022 workshop <a href="https://ssladcompetition.github.io/"> 2nd SSLAD</a> on Self-supervised Learning for Next-Generation Industry-level Autonomous Driving! </li>
     <li> [2022.07] One paper accepted by ECCV 2022! </li>
     <li> [2022.06] Invited to serve as a reviewer for TIP! </li>
     <li> [2022.05] Invited to serve as a reviewer for NeurIPS 2022! </li>
@@ -33,6 +34,7 @@ Office: C07 at CYT 3007
     <li> [2019.06] One paper accepted by IROS 2019! </li>
     <!-- <li> [2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>! So sorry that I can't be there because of time problem. </li> -->
     </ul></div>
+
 
 
 
