@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kai Chen's Homepage">
+
+
+<title>Kai Chen's Homepage</title>
+
+
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/all.min.css">
+<link rel="stylesheet" href="./css/academicons.min.css">
+<link rel="stylesheet" href="./css/charts.min.css">
+<link id="theme-style" rel="stylesheet" href="./css/main.css">
+
+<link rel="icon" type="image/png" href="./images/favicon.png">
+
+<script type="module" src="./css/background_star.js"></script>
+
+<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+</style>
+
+<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+</style>
+
+<style>.crx_bdwk_down_wrap {
+    top: 70%;
+    left: 0;
+    position: fixed;
+    z-index: 99999999;
+    color: #fff;
+    user-select: none;
+}
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading {
+        background-color: #666;
+        cursor: wait;
+        width: 126px;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading p {
+            font-size: 14px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading small {
+            font-size: 10px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_btn {
+        width: 126px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #dd5a57;
+        position: relative;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color: #666;
+        font-size: 12px;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div {
+            position: relative;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:after {
+                content: ' ';
+                height: 12px;
+                width: 1px;
+                background-color: #eee;
+                position: absolute;
+                top: 10px;
+                right: 0;
+                transform: scaleX(0.5);
+            }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:last-child:after {
+                    display: none;
+                }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_check {
+            flex: 1;
+            color: #dd5a57;
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_uncheck {
+            flex: 1;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: lighter;
+        }
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+<section class="section intro-section">
+    <div class="avatar-container">
+        <img class="avatar" src="./images/profile.jpg" alt="Kai Chen avatar">
+    </div>
+    <div class="intro-container">
+        <div class="header">
+            <h2 class="name">Kai Chen (陈铠)</h2>
+            <h3 class="title">Ph.D. Student @ HKUST</h3>
+        </div>
+        <div class="contact">
+            <a class="link" href="mailto:kai.chen@connect.ust.hk" target="_blank">Email</a>
+                &nbsp/&nbsp
+            <a class="link" href="./files/CV_of_Kai_Chen.pdf" target="_blank">CV</a>
+                &nbsp/&nbsp
+            <a class="link" href="https://github.com/KaiChen1998" target="_blank">Github</a>
+                &nbsp/&nbsp
+            <a class="link" href="https://scholar.google.com/citations?hl=en&user=3qBfyLIAAAAJ" target="_blank">Google Scholar</a>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="section profile-section">
+    <div class="section-title">
+        About Me
+    </div>
+    <div class="details">
+        <p> I am currently a Ph.D. student in CSE department of Hong Kong University of Science and Technology (HKUST), supervised by <a href="https://sites.google.com/view/dyyeung/home?authuser=0" target="_blank">Prof. Dit-Yan Yeung</a>. 
+        Previously, I was an undergraduate student majoring in Computer Science in Fudan University honored as Outstanding Undergraduate of Shanghai, supervised by <a href="https://yanweifu.github.io/" target="_blank">Prof. Yanwei Fu</a>. 
+        My research interests include Computer Vision and Artificial Intelligence, especially in representation learning, self-supervised learning and high-level vision perception.
+        </p>
+    </div>
+</section>
+
+<!-- News -->
+<section class="section news-section">
+    <div class="section-title">
+        News
+    </div>
+    <div style="height:200px;overflow-y:auto">
+    <ul>
+    <li> [2022.08] Our <a href="https://coda-dataset.github.io/">CODA</a> dataset will be utilized to hold the <a href="https://sslad2022.github.io/">2nd SSLAD</a> ECCV 2022 workshop and competition at <a href="https://codalab.lisn.upsaclay.fr/competitions/6639">CodaLab</a>! </li>
+    <li> [2022.08] Invited to serve as a reviewer for ICLR 2023!
+    <li> [2022.07] One paper accepted by ECCV 2022! </li>
+    <li> [2022.06] Invited to serve as a reviewer for TIP! </li>
+    <li> [2022.05] Invited to serve as a reviewer for NeurIPS 2022, ECCV 2022! </li>
+    <li> [2021.12] One paper accepted by AAAI 2022! </li>
+    <li> [2021.11] Invited to serve as a reviewer for CVPR 2022, ICRA 2022 and AAAI 2022! </li>
+    <li> [2021.10] One paper accepted by NeurIPS 2021! </li>
+    <li> [2021.07] One paper accepted by ICCV 2021! </li>
+    <li> [2021.07] Our <a href="https://soda-2d.github.io/">SODA10M</a> dataset will be utilized to hold the <a href="https://sslad2021.github.io/index.html">SSLAD</a> ICCV 2021 workshop on Self-supervised Learning for Next-Generation Industry-level Autonomous Driving. All are welcome! </li>
+    <li> [2021.06] Invited to serve as a reviewer for NeurIPS 2021! </li>
+    <li> [2020.06] Successful undergrad thesis defend! </li>
+    <li> [2020.03] One paper accepted by IEEE Access! </li>
+    <li> [2019.06] One paper accepted by IROS 2019! </li>
+    <!-- <li> [2020.06] Glad to be selected as one of the first 5 post-bachlor researchers of <a href="https://iiis.tsinghua.edu.cn/sqi/">Shanghai Qizhi Institute</a>! So sorry that I can't be there because of time problem. </li> -->
+    </ul></div>
+</section>
+
+<!-- Publications -->
+<section class="section publications-section">
+    <div class="section-title">
+        Publications
+    </div>
+    <p>(* denotes equal contribution)</p>
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/coda.png" alt="coda.png">
+        </div>
+        <div class="info-container">
+                <p class="title">
+                    <a class="title_link" href="https://arxiv.org/abs/2203.07724" target="_blank">CODA: A Real-World Road Corner Case Dataset for Object Detection in Autonomous Driving</a>
+                </p>
+                <div class="authors"><p>Kaican Li*, <strong>Kai Chen*</strong>, Haoyu Wang*, Lanqing Hong, Chaoqiang Ye, Jianhua Han, Yukuai Chen, Wei Zhang, Chunjing Xu, Dit-Yan Yeung, Xiaodan Liang, Zhenguo Li, Hang Xu.</p></div>
+                <div class="conference"><p><em>European Conference on Computer Vision (ECCV), 2022.</em></p></div>
+                <a class="url" href="https://arxiv.org/abs/2203.07724" target="_blank">[PDF]</a>
+                <a class="url" href="https://coda-dataset.github.io/" target="_blank">[Website]</a>
+                <a class="url" href="https://sslad2022.github.io/" target="_blank">[ECCV 2022 Workshop]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/sdr.png" alt="sdr.png">
+        </div>
+        <div class="info-container">
+                <p class="title">
+                    <a class="title_link" href="https://arxiv.org/abs/2205.13267" target="_blank">Task-Customized Self-Supervised Pre-training with Scalable Dynamic Routing.</a>
+                </p>
+                <div class="authors"><p>Zhili Liu, Jianhua Han, <strong>Kai Chen</strong>, Lanqing Hong, Hang Xu, Chunjing Xu, Zhenguo Li.</p></div>
+                <div class="conference"><p><em>AAAI Conference on Artificial Intelligence (AAAI), 2022.</em></p></div>
+                <a class="url" href="https://arxiv.org/abs/2205.13267" target="_blank">[PDF]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/SODA10M.png" alt="SODA10M.png">
+        </div>
+        <div class="info-container">
+                <p class="title">
+                    <a class="title_link" href="https://arxiv.org/abs/2106.11118" target="_blank">SODA10M: A Large-Scale 2D Self/Semi-Supervised Object Detection Dataset for Autonomous Driving.</a>
+                </p>
+                <div class="authors"><p>Jianhua Han, Xiwen Liang, Hang Xu, <strong>Kai Chen</strong>, Lanqing Hong, Jiageng Mao, Chaoqiang Ye, Wei Zhang, Zhenguo Li, Xiaodan Liang, Chunjing Xu.</p></div>
+                <div class="conference"><p><em>Datasets and Benchmarks Track, Neural Information Processing Systems (NeurIPS), 2021.</em></p></div>
+                <a href="https://arxiv.org/abs/2106.11118">[PDF]</a>
+                <a href="https://soda-2d.github.io/">[Website]</a>
+                <a href="https://sslad2021.github.io/">[ICCV Workshop]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/MultiSiam.png" alt="MultiSiam.png">
+        </div>
+        <div class="info-container">
+                <p class="title">
+                    <a class="title_link" href="https://arxiv.org/abs/2108.12178" target="_blank">MultiSiam: Self-supervised Multi-instance Siamese Representation Learning for Autonomous Driving</a>
+                </p>
+                <div class="authors"><p><strong>Kai Chen</strong>, Lanqing Hong, Hang Xu, Zhenguo Li, Dit-Yan Yeung.</p></div>
+                <div class="conference"><p><em>IEEE/CVF International Conference on Computer Vision (ICCV), 2021.</em></p></div>
+                <a class="url" href="https://arxiv.org/abs/2108.12178" target="_blank">[PDF]</a>
+                <a class="url" href="https://github.com/KaiChen1998/MultiSiam" target="_blank">[Code]</a>
+                <a class="url" href="https://zhuanlan.zhihu.com/p/406649716" target="_blank">[Zhihu (not official)]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/Access2020.png" alt="Access2020.png">
+        </div>
+        <div class="info-container">
+                <p class="title">
+                    <a class="title_link" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9052727" target="_blank">Automatic Dense Annotation for Monocular 3D Scene Understanding.</a>
+                </p>
+                <div class="authors"><p>Md. Alimoor Reza, <strong>Kai Chen</strong>, Akshay Naik, David Crandall, and Soon-Heung Jung.</p></div>
+                <div class="conference"><p><em>IEEE Access Journal (IEEE Access), 2020.</em></p></div>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9052727">[PDF]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/IROS2019.png" alt="IROS2019.png">
+        </div>
+        <div class="info-container">
+                <p class="title">
+                    <a class="title_link" href="https://www.semanticscholar.org/paper/Automatic-Annotation-for-Semantic-Segmentation-in-Reza-Naik/ec77d168c9fdb438ba18b1316f0fdd1486dd1415" target="_blank">Automatic Annotation for Semantic Segmentation in Indoor Scenes.</a>
+                </p>
+                <div class="authors"><p>Md Alimoor Reza, Akshay Naik, <strong>Kai Chen</strong>, David Crandall.</p></div>
+                <div class="conference"><p><em>IEEE International Conference on Intelligent Robots and Systems (IROS), 2019.</em></p></div>
+                <a href="https://www.semanticscholar.org/paper/Automatic-Annotation-for-Semantic-Segmentation-in-Reza-Naik/ec77d168c9fdb438ba18b1316f0fdd1486dd1415">[PDF]</a>
+        </div>
+    </div>
+</section>
+
+<!-- Experiences -->
+<section class="section experiences-section">
+    <div class="section-title">
+        Experiences
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="company">
+                Sensetime
+            </div>
+            <div class="location"> Shanghai, China</div>
+            <div class="time">Oct. 2019 - Apr. 2020</div>
+        </div>
+        <div class="below-row">
+            <div class="role">Research Intern, supervised by <a href="https://www.linkedin.com/in/wenxiu-sun-bb6b292b/?locale=de_DE" target="_blank">Dr. Wenxiu Sun</a>
+            </div>
+        </div>
+
+        <div class="upper-row">
+            <div class="company">
+                 Indiana University Bloomington
+            </div>
+            <div class="location">Indiana, U.S.A.</div>
+            <div class="time">June 2019 - Sep. 2019</div>
+        </div>
+        <div class="below-row">
+            <div class="role">Visiting Scholar at <a href="http://vision.soic.indiana.edu/" target="_blank">Computer Vision lab</a>, supervised by <a href="https://www.cs.indiana.edu/~djcran/" target="_blank">Prof. David Crandall</a>
+            </div>
+        </div>
+
+        <div class="upper-row">
+            <div class="company">
+                 University of Manchester
+            </div>
+            <div class="location">Manchester, U.K.</div>
+            <div class="time">Sep. 2018 - Jan. 2019</div>
+        </div>
+        <div class="below-row">
+            <div class="role">International exchange student, supervised by <a href="https://personalpages.manchester.ac.uk/staff/tingting.mu/Site/About_Me.html" target="_blank">Dr. Tingting Mu</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section awards-section">
+    <div class="section-title">
+        Services
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Program committee: 2nd SSLAD workshop at ECCV 2022.</p>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                Reviewer: 
+                    <ul><li> Conference: ICLR 2023, NeurIPS 2022/2021, ECCV 2022, CVPR 2022, ICRA 2022, AAAI 2022.</li>
+                    <li> Journal: TIP and IEEE Access.</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Awards -->
+<section class="section awards-section">
+    <div class="section-title">
+        Awards
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>HKUST Postgraduate Scholarship</p>
+            </div>
+            <div class="time">2020</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Scholarship for Outstanding Graduates of Fudan University <a href="https://mp.weixin.qq.com/s?__biz=MzA3OTI1MTEwMA==&mid=2650759947&idx=1&sn=b7d10894112fa6ed9852493388a6ebd5&chksm=87bd90f8b0ca19eeec8d8912dfc9d4ad6c226c1249b2b1e823d6695834788c23d978261ed657&mpshare=1&scene=24&srcid=0531IJ3kc4oxdiBIiSFBXPLN&sharer_sharetime=1591584575276&sharer_shareid=c47b85daf6bf0d13114eb8b891f7f7ce&key=0b622c5b94cbe1faf22612d7eb4e839aef4b78ae53d44e804e14bf8b7348025bba127d870788bc7468145e0d74cfd17084697af9d56c38802f3c576a074cdf3b6c7b4df1cb683706c50eb748c0efb769&ascene=14&uin=MTkxMTI3NDE2MA%3D%3D&devicetype=Windows+10+x64&version=62090070&lang=zh_CN&exportkey=AeU2zH7zxdVYk%2B27xsopWyg%3D&pass_ticket=BHNPuN38G7IorL%2BzrzL7sS1maBklEESAn0%2Bbo7KukczHK1FeSx9nruLvUyjl%2FMA6" target="_blank">[post]</a></p>
+            </div>
+            <div class="time">2020</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Joel & Ruth Spira Scholarship</p>
+            </div>
+            <div class="time">2019</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Oversea Visiting Student Stipend of Fudan University</p>
+            </div>
+            <div class="time">2019</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>National Scholarship</p>
+            </div>
+            <div class="time">2018</div>
+        </div>
+    </div>
+    
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Scholarship for Outstanding Undergraduates of Fudan University</p>
+            </div>
+            <div class="time">2017</div>
+        </div>
+    </div>
+</section>
+
+<section class="section awards-section">
+    <div class="section-title">
+        Interest
+    </div>
+    <p>I love basketball and I'm also a big fan of <a href="https://zh.wikipedia.org/wiki/%E6%96%AF%E8%92%82%E8%8A%AC%C2%B7%E7%A7%91%E9%87%8C" target="_blank">Stepfen Curry</a>, MVP point guard of Golden State Warriors, NBA. I'm a team member of my class's basketball team and often play <strong>Score / Power forward (SF/PF)</strong>. In my spare time, I also play the role of a <strong>basketball game referee</strong>. Hope one day I can have a chance to see a home game of Warriors in Chase Center San Francisco!
+    </p>
+    <table border="1" style="margin: auto">
+        <tr>
+            <td>
+                <a><img src="./images/about/1.jpg" height=250></a>
+            </td>
+            <td>
+                <a><img src="./images/about/2.jpg" height=250></a>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=m&d=yiQ0HZFZE6xxLisn4CXJm4uDBj9OigBd9mOjntKZg_U"></script> -->
+
+<footer class="footer">
+    <div class="text-center">
+        <small id="copyright">
+            @ Kai Chen
+        </small>
+    </div>
+</footer>
+
+
+</body></html>
